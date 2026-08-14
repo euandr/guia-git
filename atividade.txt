@@ -1,0 +1,28 @@
+Atividade
+
+1. Finalidade do Site
+Qual é o objetivo do site?
+Que tipo de usuário irá utilizá-lo?
+Qual problema ou necessidade ele atende?
+
+2. Conteúdo (HTML)
+Descrever quais informações o site apresentará, tais como:
+Páginas principais (ex .: Home, Sobre, Serviços, Contato, Portfólio etc.)
+Tipos de conteúdo (textos, imagens, links, formulários)
+
+3. Aparência (CSS)
+Definir as características visuais do site:
+Estilo visual (profissional, moderno, criativo, minimalista, etc.)
+Cores predominantes
+Organização do layout
+
+4.Interatividade (JavaScript)
+Indicar possíveis funcionalidades interativas, como:
+Botões e ações do usuário
+Validação de formulários
+Mensagens ou feedbacks visuais
+Animações simples
+
+5.Diferencial da Proposta
+O que torna esse site interessante ou diferente?
+Qual o principal valor entregue ao usuário?

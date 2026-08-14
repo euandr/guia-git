@@ -1,2 +1,2 @@
 # guia-git
-projeto de aprendizagem - materia programacao web - ensino superior
+Projeto de Aprendizagem - Programacao Web - ADS

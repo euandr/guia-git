@@ -1,0 +1,40 @@
+body{
+    background-color:#0d1117;
+    color:white;
+}
+nav{
+    display:flex;
+    gap:30px;
+    
+}
+.img_logo{
+    width:20px;
+    height: 20px;
+    margin-top:15px;
+
+}
+.logo{
+    display:flex;
+    gap:10px;
+}
+
+.menu{
+    display:flex;
+    gap:10px;
+    list-style: none;
+}
+
+.terminal{
+    background-color:#161b22;
+    padding:100px 200px;
+     border-radius:10px;;
+
+}
+
+.hero{
+    margin-top:20px;
+    display:flex;
+   
+    gap:15px;
+    
+}

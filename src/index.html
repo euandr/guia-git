@@ -1,46 +1,197 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guia Git e github</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <nav> 
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
         <div class="logo">
-            <img class="img_logo" src="../assets/logo1.png" alt="">
-            <p>GitBase .</p>
+          <img class="img_logo" src="../assets/logo.png" alt="" />
+          <p>GitBase .</p>
         </div>
 
-        <ul class="menu">
-            <li>Início</li>
-            <li>Git</li>
-            <li>Github</li>
-            <li>Guias</li>
-            <li>Pratique</li>
-            <li>Sobre</li>
-        </ul>
+        <div class="menu">
+          <a href="./index.html">Início</a>
+          <a href="./git.html">Git</a>
+          <a href="./github.html">Github</a>
+          <a href="./guias.html">Guias</a>
+          <a href="./pratique.html">Pratique</a>
+          <a href="./sobre.html">Sobre</a>
+        </div>
 
-        <button>Conhecer Github</button>
-    </nav>
+        <button>Ir para Github</button>
+      </nav>
+    </header>
+
     <main>
-        <section>
-            <div class="hero">
+      <section>
+        <div class="hero">
+          <div>
+            <h1>Controle seu código. Domine seus projetos.</h1>
+            <p>
+              Pare de decorar comandos sem entender o que acontece. Visualize o
+              fluxo, entenda cada etapa e descubra como Git e GitHub realmente
+              funcionam no desenvolvimento.
+            </p>
+            <button>Ver como funciona</button>
+            <button>explorar guias</button>
+          </div>
+          <div class="terminal"></div>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <div>
+            <p>POR QUE GIT?</p>
+            <h1>Código sem controle <span>vira caos.</span></h1>
+            <p>
+              A união perfeita entre versionamento local e hospedagem em nuvem.
+            </p>
+          </div>
+          <p>
+            Arquivos duplicados, alterações perdidas, medo de mexer no código e
+            pastas como projeto-final-v2-agora-vai. Git resolve exatamente esse
+            problema.
+          </p>
+        </div>
+
+        <div class="quadros-cod-organizados">
+          <div class="quadro"></div>
+          <div class="quadro"></div>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <div>
+            <p>O FLUXO</p>
+            <h1>Seu código.<span> Um histórico.</span> Uma equipe.</h1>
+          </div>
+          <p>
+            Git controla cada mudança na sua máquina. GitHub transforma esse
+            histórico em colaboração. Veja o caminho completo de uma alteração.
+          </p>
+        </div>
+        <div class="quadro">
+          <div class="parte-cima">
+            <p>DEVELOPMENT WORKFLOW</p>
+            <p>repository connected</p>
+          </div>
+          <div>
+            <h3>Seu código</h3>
+          </div>
+          <div>
+            <h3>Staging</h3>
+          </div>
+          <div>
+            <h3>Git</h3>
+          </div>
+          <div>
+            <h3>GitHub</h3>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <p>BRANCHES</p>
+          <h1>Trabalhe sem <span>quebrar tudo.</span></h1>
+          <p>
+            Branches permitem criar linhas paralelas de desenvolvimento. Você
+            pode experimentar uma funcionalidade, corrigir um bug ou testar uma
+            ideia sem comprometer a versão principal.
+          </p>
+          <ul>
+            <li>main — produção</li>
+            <li>feature/auth — nova funcionalidade</li>
+            <li>feature/ui — redesign</li>
+          </ul>
+        </div>
+        <div class="quadro">
+          <div class="cima">
+            <p>repository / gitbase</p>
+            <p>3 branches</p>
+          </div>
+          <!-- img com ramificações - branchs -->
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <p>PRATIQUE</p>
+          <h1>Explore os comandos.</h1>
+          <p>
+            Selecione um comando e descubra o que realmente acontece por trás
+            dele.
+          </p>
+        </div>
+        <div class="quadro">
+          <div class="lado_esquerdo">
+            <p>GIT COMMANDS</p>
+            <button>git status</button>
+            <button>git add</button>
+            <button>git commit</button>
+            <button>git branch</button>
+            <button>git push</button>
+            <button>git pull</button>
+          </div>
+          <div class="lado_direito">
+            <div>
+                <h3>git add .</h3>
+                <p>Move as alterações escolhidas para a staging area, preparando exatamente o que será incluído no próximo commit.</p>
+            </div>
+            <div class="quadro_interno">
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+            <div>
+                <p>GITBASE</p>
+                <h1>Seu próximo commit <span></span>começa aqui.</h1>
+                <p>O GitBase foi criado para você aprender Git e GitHub na prática. Explore os conceitos, siga os guias e teste seus conhecimentos.</p>
+            </div>
+            <div>
                 <div>
-                    <h1>Controle seu código. Domine seus projetos.</h1>
-                    <p>Aprenda Git e GitHub do zero com clareza visual, comandos práticos e fluxos do mundo real</p>
-                    <button>Ver como funciona</button>
-                    <button>explorar guias</button>
+                    <p>01</p>
+                    <h3>Aprenda Git</h3>
+                    <p>entenda versionamento, commits, branchs e o fluxo do Git</p>
                 </div>
-                <div class="terminal">
-                    
+                <div>
+                    <p>02</p>
+                    <h3>Siga os guias</h3>
+                    <p>Aprenda passo a passo como usar Git e GitHub em projetos reais.</p>
+                </div>
+                <div>
+                    <p>03</p>
+                    <h3>Pratique</h3>
+                    <p>Teste seus conhecimentos e coloque o que voce aprendeu em ação</p>
                 </div>
             </div>
-           
-        </section>
+      </section>
     </main>
-    
-</body>
+    <footer>
+        <div class="logo">
+          <img class="img_logo" src="../assets/logo.png" alt="" />
+          <p>GitBase .</p>
+        </div>
+        <p>Aprenda. Versione. Colabore.</p>
+        <div class="menu">
+          <a href="./index.html">Início</a>
+          <a href="./git.html">Git</a>
+          <a href="./github.html">Github</a>
+          <a href="./guias.html">Guias</a>
+          <a href="./pratique.html">Pratique</a>
+          <a href="./sobre.html">Sobre</a>
+        </div>
+
+    </footer>
+  </body>
 </html>
-  

@@ -5,6 +5,7 @@ body{
 nav{
     display:flex;
     gap:30px;
+     align-items: center;
     
 }
 .img_logo{
@@ -18,16 +19,25 @@ nav{
     gap:10px;
 }
 
+section{
+    margin-top:200px;
+}
 .menu{
+
     display:flex;
     gap:10px;
     list-style: none;
+
+}
+.menu a {
+    text-decoration: none;
+    color: white;
 }
 
 .terminal{
     background-color:#161b22;
     padding:100px 200px;
-     border-radius:10px;;
+    border-radius:10px;;
 
 }
 
@@ -36,5 +46,28 @@ nav{
     display:flex;
    
     gap:15px;
+    
+}
+
+.quadro{
+    padding:100px 200px;
+    background-color:#161b22;
+    border-radius:10px;
+    border: 1px solid #30363d;
+}
+.quadro_interno{
+    background-color:#090d11;
+    padding:100px 200px;
+}
+.quadros-cod-organizados{
+    display:flex;
+    gap:10px;
+
+}
+footer{
+    margin-top: 200px;
+    display:flex;
+    gap: 50px;
+    align-items: center;
     
 }

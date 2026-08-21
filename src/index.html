@@ -4,14 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guia Git e github</title>
-    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="container">
         <div class="logo">
           <img class="img_logo" src="../assets/logo.png" alt="" />
-          <p>GitBase .</p>
+          <p >GitBase .</p>
+          
+          
+          <!-- <div class="dot green"> </div> -->
         </div>
 
         <div class="menu">
@@ -23,11 +26,11 @@
           <a href="./sobre.html">Sobre</a>
         </div>
 
-        <button>Ir para Github</button>
+        <button>Conhecer Github</button>
       </nav>
     </header>
 
-    <main>
+    <main class="container">
       <section>
         <div class="hero">
           <div>
@@ -40,7 +43,16 @@
             <button>Ver como funciona</button>
             <button>explorar guias</button>
           </div>
-          <div class="terminal"></div>
+          <div class="terminal">
+            <div class="terminal-top">
+              <div class="terminal-top-left">
+                <div class="circle red"></div>
+                <div class="circle yellow"></div>
+                <div class="circle green"></div>
+              </div>
+              <p>bash — gitbase ~/projeto</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -142,56 +154,63 @@
           </div>
           <div class="lado_direito">
             <div>
-                <h3>git add .</h3>
-                <p>Move as alterações escolhidas para a staging area, preparando exatamente o que será incluído no próximo commit.</p>
+              <h3>git add .</h3>
+              <p>
+                Move as alterações escolhidas para a staging area, preparando
+                exatamente o que será incluído no próximo commit.
+              </p>
             </div>
-            <div class="quadro_interno">
-
-            </div>
+            <div class="quadro_interno"></div>
           </div>
         </div>
       </section>
 
       <section>
-            <div>
-                <p>GITBASE</p>
-                <h1>Seu próximo commit <span></span>começa aqui.</h1>
-                <p>O GitBase foi criado para você aprender Git e GitHub na prática. Explore os conceitos, siga os guias e teste seus conhecimentos.</p>
-            </div>
-            <div>
-                <div>
-                    <p>01</p>
-                    <h3>Aprenda Git</h3>
-                    <p>entenda versionamento, commits, branchs e o fluxo do Git</p>
-                </div>
-                <div>
-                    <p>02</p>
-                    <h3>Siga os guias</h3>
-                    <p>Aprenda passo a passo como usar Git e GitHub em projetos reais.</p>
-                </div>
-                <div>
-                    <p>03</p>
-                    <h3>Pratique</h3>
-                    <p>Teste seus conhecimentos e coloque o que voce aprendeu em ação</p>
-                </div>
-            </div>
+        <div>
+          <p>GITBASE</p>
+          <h1>Seu próximo commit <span></span>começa aqui.</h1>
+          <p>
+            O GitBase foi criado para você aprender Git e GitHub na prática.
+            Explore os conceitos, siga os guias e teste seus conhecimentos.
+          </p>
+        </div>
+        <div>
+          <div>
+            <p>01</p>
+            <h3>Aprenda Git</h3>
+            <p>entenda versionamento, commits, branchs e o fluxo do Git</p>
+          </div>
+          <div>
+            <p>02</p>
+            <h3>Siga os guias</h3>
+            <p>
+              Aprenda passo a passo como usar Git e GitHub em projetos reais.
+            </p>
+          </div>
+          <div>
+            <p>03</p>
+            <h3>Pratique</h3>
+            <p>
+              Teste seus conhecimentos e coloque o que voce aprendeu em ação
+            </p>
+          </div>
+        </div>
       </section>
     </main>
     <footer>
-        <div class="logo">
-          <img class="img_logo" src="../assets/logo.png" alt="" />
-          <p>GitBase .</p>
-        </div>
-        <p>Aprenda. Versione. Colabore.</p>
-        <div class="menu">
-          <a href="./index.html">Início</a>
-          <a href="./git.html">Git</a>
-          <a href="./github.html">Github</a>
-          <a href="./guias.html">Guias</a>
-          <a href="./pratique.html">Pratique</a>
-          <a href="./sobre.html">Sobre</a>
-        </div>
-
+      <div class="logo">
+        <img class="img_logo" src="../assets/logo.png" alt="" />
+        <p>GitBase .</p>
+      </div>
+      <p>Aprenda. Versione. Colabore.</p>
+      <div class="menu">
+        <a href="./index.html">Início</a>
+        <a href="./git.html">Git</a>
+        <a href="./github.html">Github</a>
+        <a href="./guias.html">Guias</a>
+        <a href="./pratique.html">Pratique</a>
+        <a href="./sobre.html">Sobre</a>
+      </div>
     </footer>
   </body>
 </html>

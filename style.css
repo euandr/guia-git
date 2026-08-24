@@ -1,11 +1,14 @@
-
 :root {
-  --color-bg: #0a1112;
-  --color-surface: #161b22;
-  --color-surface-dark: #090d11;
+  --color-red: #f85149;
+  --color-yellow: #e3b341;
+  --color-blue: #58a6ff;
+  --color-bg: #090c11;
+  --color-terminal-first: #0b0f14;
+  --color-terminal-first-dark: #090d11;
+  --color-terminal-second: #090d12;
   --color-border: #30363d;
   --color-text: #ffffff;
-  --color-text-muted: #7f8997;
+  --color-text-secondary: #7f8997;
   --color-text-secondary: #b1bac4;
   --color-green: #238636;
   --color-green-light: #2ea043;
@@ -21,19 +24,19 @@ html {
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 code {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
 }
 
 h1 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .container {
-  max-width: 80.25rem;
+  max-width: 115rem;
   margin-left: auto;
   margin-right: auto;
   padding: 0 1.5rem;
@@ -48,6 +51,28 @@ h1 {
 
 .green {
   background-color: var(--color-green-light);
+}
+
+.circle-gradiente-blue-green {
+  position: fixed;
+  inset: 0;
+  z-index: -5;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 50% -10%,
+      rgba(31, 111, 235, 0.14),
+      transparent 35%
+    ),
+    radial-gradient(circle at 85% 35%, rgba(63, 185, 80, 0.04), transparent 25%);
+}
+.gradient-ultima-section {
+  background: radial-gradient(
+    circle at 50% 100%,
+    rgba(31, 111, 235, 0.11),
+    transparent 50%
+  );
 }
 
 header {
@@ -85,13 +110,16 @@ nav {
 nav button {
   background-color: var(--color-green);
   color: var(--color-text);
-  padding: 0.9rem 1rem;
-  border-radius: 0.4rem;
+  padding: 1.3rem 2rem;
+  border-radius: 0.5rem;
   border: none;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   white-space: nowrap;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
 }
 nav button:hover {
   transform: translateY(-0.3rem);
@@ -106,21 +134,24 @@ nav button:hover {
 }
 
 .logo img {
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 2.3rem;
+  height: 2.3rem;
 }
 
 .logo span {
   color: var(--color-green);
+  font-size: 2rem;
 }
 
 .logo p {
+  padding-left: 0.5rem;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 section {
-  margin-top: 12.5rem;
+  margin-top: 7rem;
+  margin-bottom: 15rem;
 }
 
 .menu {
@@ -131,8 +162,8 @@ section {
 
 .menu a {
   text-decoration: none;
-  color: var(--color-text-muted);
-  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  font-size: 1.3rem;
   position: relative;
 }
 
@@ -161,50 +192,218 @@ section {
 .hero {
   margin-top: 1.25rem;
   display: flex;
-  gap: 0.9375rem;
 }
 
 .hero-text h1 {
-  font-size: 7rem;
+  font-size: 9rem;
   line-height: 0.9;
 }
-.hero-text span{
-  color:#4a8bd6
+.hero-text span {
+  color: #4a8bd6;
 }
-.hero-text p{
-  font-size: 1.5rem;
-  color:#7f8893;
+.hero-text p {
+  font-size: 1.9rem;
+  color: #7f8893;
   line-height: 1.5;
-  
+  margin-right: 5rem;
 }
-.hero-text button{
+.button1-hero {
   background-color: var(--color-green);
   color: var(--color-text);
-  padding: 0.9rem 1rem;
-  border-radius: 0.4rem;
+  padding: 1rem 1.8rem;
+  border-radius: 0.5rem;
   border: none;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   white-space: nowrap;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
 }
 
+.button1-hero:hover {
+  transform: translateY(-0.3rem);
+  filter: brightness(1.15);
+  box-shadow: 0 0.5rem 1.5rem rgba(46, 160, 67, 0.35);
+}
+.button2-hero {
+  background-color: transparent;
+  color: var(--color-text);
+  margin-left: 2rem;
+  padding: 1rem 1.8rem;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid var(--color-border);
+  font-weight: bold;
+  font-size: 1.4rem;
+  white-space: nowrap;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+.button2-hero:hover {
+  transform: translateY(-0.3rem);
+  filter: brightness(1.15);
+  box-shadow: 0 0.5rem 1.5rem rgba(46, 56, 48, 0.35);
+  background-color: var(--color-terminal-first);
+}
 
 .terminal {
-  background-color: var(--color-surface);
-  padding: 6.25rem 12.5rem;
-  border-radius: 0.625rem;
+  background-color: var(--color-terminal-first);
+  border-radius: 1.8rem;
+  border: 0.0625rem solid var(--color-border);
+  overflow: visible;
+  width: 150rem;
+  margin-top: 7rem;
+  margin-bottom: 9rem;
+  animation: floating 3s ease-in-out infinite;
+  position: relative;
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+.terminal-top {
+  border-bottom: 0.0625rem solid var(--color-border);
+  border-radius: 1.8rem 1.8rem 0 0;
+  display: flex;
+  align-items: center;
+  padding-left: 1.25rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  gap: 6rem;
+  background-color: var(--color-terminal-second);
+}
+.terminal-top p {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  opacity: 0.7;
+}
+.terminal-top-left {
+  padding-right: 10rem;
+}
+.terminal-body {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem;
+  gap: 1.6rem;
+}
+.terminal-body p {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: bold;
+  word-spacing: 0.5rem;
+}
+
+.espaco-piscando {
+  background-color: var(--color-green);
+  padding: 0.1rem 0.4rem;
+  margin-left: 0.8rem;
+  margin-bottom: 2rem;
+  animation: piscar 1.5s steps(1) infinite;
+}
+@keyframes piscar {
+  50% {
+    opacity: 0;
+  }
+}
+.terminal-info {
+  position: absolute;
+  right: -4rem;
+  bottom: 2rem;
+
+  width: 20rem;
+  min-height: 15rem;
+  box-sizing: border-box;
+
+  padding: 1.5rem;
+
+  background-color: rgb(16, 21, 28);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+
+  z-index: 2;
+}
+.top-subterminal {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 2rem 0;
+}
+
+.bottom-subterminal {
+  display: flex;
+  gap: 1rem;
+}
+.icons-commits {
+  display: flex;
+  flex-direction: column;
+}
+.text-commits {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.text-commits p {
+  font-size: 1rem;
+  font-weight: 50;
+}
+.terminal-info p {
+  font-weight: 50;
+}
+.path-terminal {
+  color: #5096e6;
+}
+.branch {
+  color: #b486f3;
+}
+.color-green {
+  color: var(--color-green);
+}
+.color-gray {
+  color: rgb(80, 88, 97);
+}
+.circle {
+  border-radius: 50%;
+  width: 0.9rem;
+  height: 0.9rem;
+  display: inline-block;
+}
+.red {
+  background-color: var(--color-red);
+}
+.yellow {
+  background-color: var(--color-yellow);
+}
+.blue {
+  background-color: var(--color-blue);
+}
+.linha-vertical {
+  width: 0;
+  height: 2rem;
+  border-left: 1px solid var(--color-border);
+  margin-left: 0.4rem;
 }
 
 .quadro {
   padding: 6.25rem 12.5rem;
-  background-color: var(--color-surface);
+  background-color: var(--color-terminal-first);
   border-radius: 0.625rem;
   border: 0.0625rem solid var(--color-border);
 }
 
 .quadro_interno {
-  background-color: var(--color-surface-dark);
+  background-color: var(--color-terminal-first-dark);
   padding: 6.25rem 12.5rem;
 }
 
@@ -220,3 +419,12 @@ footer {
   align-items: center;
 }
 
+/* ------section 2 -----------------------*/
+
+.section-top {
+  display: flex;
+}
+.section-top div {
+  display: flex;
+  flex-direction: column;
+}

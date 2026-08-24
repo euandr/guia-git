@@ -15,6 +15,7 @@
   </head>
 
   <body>
+    <div class="circle-gradiente-blue-green"></div>
     <header>
       <nav class="container">
         <div class="logo">
@@ -47,9 +48,9 @@
               funcionam no desenvolvimento.
             </p>
             <button class="button1-hero">Ver como funciona</button>
-            <button class="button2-hero">explorar guias</button>
+            <button class="button2-hero">Explorar guias</button>
           </div>
-
+          
           <div class="terminal">
             <div class="terminal-top">
               <div class="terminal-top-left">
@@ -59,14 +60,46 @@
               </div>
               <p>bash — gitbase ~/projeto</p>
             </div>
+            <div class="terminal-body">
+              <p><span class="path-terminal">~/projeto</span> <span class="branch">(main)</span> $ git status</p>
+              <p class="color-gray">On branch main</p>
+              <p class="color-gray">Charges not staged for commit:</p>
+              <p><span class="path-terminal">~/projeto</span> <span class="branch">(main)</span> $ git add .</p>
+              <p><span class="path-terminal">~/projeto</span> <span class="branch">(main)</span> $ git commit -m <span class="branch">"feat: new dashboard"</span></p>
+              <p class="color-green">[main a81c2e9] feat: new dashboard</p>
+              <p><span class="path-terminal">~/projeto</span> <span class="branch">(main)</span> $ git push origin main <span class="espaco-piscando"></span></p>
+
+              <div class="terminal-info">
+                <div class="top-subterminal">
+                  <p class="color-gray"> COMMITS</p>
+                  <p class="color-green">sync</p>
+                </div>
+                <div class="bottom-subterminal">
+                  <div class="icons-commits">
+                    <div class="circle green"></div>
+                    <div class="linha-vertical"></div>
+                    <div class="circle green"></div>
+                    <div class="linha-vertical"></div>
+                    <div class="circle green"></div>
+                  </div>
+
+                  <div class="text-commits">
+                    <p>feat: dashboard</p>
+                    <p>fix: auth flow</p>
+                    <p>initial commit</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section>
-        <div>
+        <div class="section-top">
           <div>
-            <p>POR QUE GIT?</p>
+            <p><span>――</span>ㅤPOR QUE GIT?</p>
             <h1>Código sem controle <span>vira caos.</span></h1>
             <p>
               A união perfeita entre versionamento local e hospedagem em nuvem.
@@ -172,7 +205,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="gradient-ultima-section">
         <div>
           <p>GITBASE</p>
           <h1>Seu próximo commit <span></span>começa aqui.</h1>

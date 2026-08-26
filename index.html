@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
 
   <body>
@@ -20,7 +21,7 @@
       <nav class="container">
         <div class="logo">
           <img src="../assets/logo.png" alt="" />
-          <p >GitBase <span>.</span></p>
+          <p>GitBase <span>.</span></p>
         </div>
 
         <div class="menu">
@@ -34,7 +35,6 @@
 
         <button>Conhecer Github</button>
       </nav>
-
     </header>
 
     <main class="container">
@@ -50,7 +50,7 @@
             <button class="button1-hero">Ver como funciona</button>
             <button class="button2-hero">Explorar guias</button>
           </div>
-          
+
           <div class="terminal">
             <div class="terminal-top">
               <div class="terminal-top-left">
@@ -61,17 +61,31 @@
               <p>bash — gitbase ~/projeto</p>
             </div>
             <div class="terminal-body">
-              <p><span class="path-terminal">~/projeto</span> <span class="branch">(main)</span> $ git status</p>
+              <p>
+                <span class="path-terminal">~/projeto</span>
+                <span class="branch">(main)</span> $ git status
+              </p>
               <p class="color-gray">On branch main</p>
               <p class="color-gray">Charges not staged for commit:</p>
-              <p><span class="path-terminal">~/projeto</span> <span class="branch">(main)</span> $ git add .</p>
-              <p><span class="path-terminal">~/projeto</span> <span class="branch">(main)</span> $ git commit -m <span class="branch">"feat: new dashboard"</span></p>
+              <p>
+                <span class="path-terminal">~/projeto</span>
+                <span class="branch">(main)</span> $ git add .
+              </p>
+              <p>
+                <span class="path-terminal">~/projeto</span>
+                <span class="branch">(main)</span> $ git commit -m
+                <span class="branch">"feat: new dashboard"</span>
+              </p>
               <p class="color-green">[main a81c2e9] feat: new dashboard</p>
-              <p><span class="path-terminal">~/projeto</span> <span class="branch">(main)</span> $ git push origin main <span class="espaco-piscando"></span></p>
+              <p>
+                <span class="path-terminal">~/projeto</span>
+                <span class="branch">(main)</span> $ git push origin main
+                <span class="espaco-piscando"></span>
+              </p>
 
               <div class="terminal-info">
                 <div class="top-subterminal">
-                  <p class="color-gray"> COMMITS</p>
+                  <p class="color-gray">COMMITS</p>
                   <p class="color-green">sync</p>
                 </div>
                 <div class="bottom-subterminal">
@@ -89,7 +103,6 @@
                     <p>initial commit</p>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -97,51 +110,70 @@
       </section>
 
       <section>
-        <div class="section-top">
-          <div>
+        <div class="section2-top">
+          <div class="div-title">
             <p><span>――</span>ㅤPOR QUE GIT?</p>
-            <h1>Código sem controle <span>vira caos.</span></h1>
-            <p>
-              A união perfeita entre versionamento local e hospedagem em nuvem.
-            </p>
+            <h1>
+              Código sem controle <span class="color-gray">vira caos.</span>
+            </h1>
           </div>
-          <p>
-            Arquivos duplicados, alterações perdidas, medo de mexer no código e
-            pastas como projeto-final-v2-agora-vai. Git resolve exatamente esse
-            problema.
+          <p class="color-gray">
+            Arquivos Duplicados, alterações perdidas, medo de mexer no código e
+            pastas como
+            <span class="color-gray-maisclaro"
+              >projeto-final-v2-agora-vai.</span
+            >
+            Git resolve exatamente esse problema.
           </p>
         </div>
 
-        <div class="quadros-cod-organizados">
-          <div class="quadro"></div>
-          <div class="quadro"></div>
+        <div class="section2-quadros">
+          <div class="quadro1"></div>
+          <i data-lucide="move-right"></i>
+          <div class="quadro2"></div>
         </div>
       </section>
 
       <section>
-        <div>
-          <div>
-            <p>O FLUXO</p>
-            <h1>Seu código.<span> Um histórico.</span> Uma equipe.</h1>
+        <div class="section2-top">
+          <div class="div-title">
+            <p><span>――</span>ㅤO FLUXO</p>
+            <h1>
+              Seu código.<span class="color-blue"> Um histórico.</span>
+              ㅤㅤㅤUma equipe.
+            </h1>
           </div>
-          <p>
-            Git controla cada mudança na sua máquina. GitHub transforma esse
-            histórico em colaboração. Veja o caminho completo de uma alteração.
-          </p>
+          <div class="section3-right">
+            <p>
+              <span class="color-orange">Git </span>controla cada mudança na sua
+              máquina.
+            </p>
+            <p>
+              <span class="color-purple">GitHub</span> transforma esse histórico
+              em colaboração. Veja o caminho completo de uma alteração.
+            </p>
+          </div>
         </div>
-        <div class="quadro">
-          <div class="parte-cima">
+        <div class="section3-quadro">
+          <div class="quadro-top-section3">
             <p>DEVELOPMENT WORKFLOW</p>
             <p>repository connected</p>
           </div>
-          <div>
-            <h3>Seu código</h3>
-          </div>
-          <div>
-            <h3>Staging</h3>
-          </div>
-          <div>
-            <h3>Git</h3>
+          <div class="quadros-internos-section3">
+            <div class="quadro-no-quadro">
+              <div class="small-square">
+               <i class="color-blue" data-lucide="file-text"></i>
+               </div>
+              <p>01 · ESCREVA</p>
+              <h3>Seu código</h3>
+              <p>Você cria e modifica arquivos normalmente no seu computador.</p>
+            </div>
+            <div>
+              <h3>Staging</h3>
+            </div>
+            <div>
+              <h3>Git</h3>
+            </div>
           </div>
           <div>
             <h3>GitHub</h3>
@@ -252,5 +284,8 @@
         <a href="./sobre.html">Sobre</a>
       </div>
     </footer>
+    <script>
+      lucide.createIcons();
+    </script>
   </body>
 </html>

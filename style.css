@@ -529,17 +529,62 @@ footer {
   display:flex;
   background-color:red;
   padding:2rem 3rem; 
+  gap:3rem;
   
 }
+
 .quadro-no-quadro{
   background-color: #0e1318;
   display:flex;
   flex-direction:column;
   border-radius:1rem;
+  padding:3rem;
+  gap:1rem;
+  width: 24rem;
+  
 
 }
 .small-square{
   background-color:#1c2d41;
-  padding:3rem;
+  padding:1rem; 
   align-self: flex-start;
+  border-radius:1rem;
+  margin-bottom: 0.5rem;
+
+ 
+}
+.small-square-purple{
+    background-color:#2e283a;
+  padding:1rem; 
+  align-self: flex-start;
+  border-radius:1rem;
+  margin-bottom: 0.5rem;
+}
+.color-white{
+  color: white !important;
+  font-size: 1.2rem;
+}
+.src{
+  font-size:0.8em;
+  opacity:0.5;
+}
+.quadro-no-quadro p,
+.quadro-no-quadro h3 {
+  margin: 0;
+}
+.quadro-no-quadro > p{
+  opacity:0.5;
+ 
+}
+.quadro-no-quadro h3{
+  font-size:2rem;
+}
+.div-tree{
+  background-color: #050607;
+  padding:1rem 2rem;
+  border-radius:0.8rem;
+  font-size:1.4rem;
+  border: 0.02rem solid color-mix(in srgb, var(--color-border) 50%, transparent);
+  padding:2rem;
+  margin-top:1rem;
 }

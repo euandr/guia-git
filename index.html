@@ -20,7 +20,7 @@
     <header>
       <nav class="container">
         <div class="logo">
-          <img src="../assets/logo.png" alt="" />
+          <img src="./assets/logo.png" alt="" />
           <p>GitBase <span>.</span></p>
         </div>
 
@@ -66,7 +66,7 @@
                 <span class="branch">(main)</span> $ git status
               </p>
               <p class="color-gray">On branch main</p>
-              <p class="color-gray">Charges not staged for commit:</p>
+              <p class="color-gray">Changes not staged for commit:</p>
               <p>
                 <span class="path-terminal">~/projeto</span>
                 <span class="branch">(main)</span> $ git add .
@@ -128,9 +128,49 @@
         </div>
 
         <div class="section2-quadros">
-          <div class="quadro1"></div>
+          <div class="quadro1">
+            <p class="card-label">O PROBLEMA</p>
+            <p class="card-badge-red">WITHOUT GIT</p>
+            <div class="chaos-files">
+              <div class="file">projeto.zip</div>
+              <div class="file">projeto-final/</div>
+              <div class="file">projeto-final-2/</div>
+              <div class="file">projeto-final-agora.zip</div>
+              <div class="file">projeto-backup.zip</div>
+            </div>
+          </div>
           <i data-lucide="move-right"></i>
-          <div class="quadro2"></div>
+          <div class="quadro2">
+            <p class="card-label">A SOLUÇÃO</p>
+            <p class="card-badge-green">WITH GIT</p>
+            <div class="solution-flow">
+              <div class="solution-row">
+                <span class="dot-green"></span>
+                working tree
+                <span>alterações</span>
+              </div>
+              <div class="solution-row">
+                <span class="dot-green"></span>
+                staging area
+                <span>preparação</span>
+              </div>
+              <div class="solution-row">
+                <span class="dot-green"></span>
+                commit
+                <span>snapshot</span>
+              </div>
+              <div class="solution-row">
+                <span class="dot-green"></span>
+                history
+                <span>controle</span>
+              </div>
+              <div class="solution-row">
+                <span class="dot-green"></span>
+                remote
+                <span>colaboração</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -157,7 +197,10 @@
         <div class="section3-quadro">
           <div class="quadro-top-section3">
             <p>DEVELOPMENT WORKFLOW</p>
-            <p>repository connected</p>
+            <p class="status-connected">
+              <span class="dot-green"></span>
+              repository connected
+            </p>
           </div>
           <div class="quadros-internos-section3">
             <div class="quadro-no-quadro">
@@ -176,6 +219,12 @@
                 <p class="color-white">|__ style.css</p>
               </div>
             </div>
+
+            <div class="flow-connector">
+              <span>git add</span>
+              <div class="connector-line"></div>
+            </div>
+
             <div class="quadro-no-quadro">
               <div class="small-square-purple">
                 <i class="color-purple" data-lucide="plus"></i>
@@ -198,121 +247,233 @@
               </div>
             </div>
 
-            <div>
+            <div class="flow-connector">
+              <span>git commit</span>
+              <div class="connector-line"></div>
+            </div>
+
+            <div class="quadro-no-quadro">
+              <div class="small-square-green">
+                <i class="color-green-light" data-lucide="git-commit-horizontal"></i>
+              </div>
+              <p>03 · VERSIONE</p>
               <h3>Git</h3>
+              <p>
+                Cada commit cria um ponto no histórico que você pode consultar,
+                comparar ou restaurar.
+              </p>
+              <div class="commit-history">
+                <div class="commit-item">
+                  <span class="commit-node"></span>
+                  <div>
+                    <strong>feat: dashboard</strong>
+                    <small>a81c2e9 · 2 min ago</small>
+                  </div>
+                </div>
+                <div class="commit-item">
+                  <span class="commit-node"></span>
+                  <div>
+                    <strong>fix: auth flow</strong>
+                    <small>4f8b2a1 · yesterday</small>
+                  </div>
+                </div>
+                <div class="commit-item">
+                  <span class="commit-node"></span>
+                  <div>
+                    <strong>initial commit</strong>
+                    <small>91c0d72 · 3 days ago</small>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div>
-            <h3>GitHub</h3>
+
+          <div class="remote-divider">
+            <div class="remote-line"></div>
+            <div class="remote-command">
+              <span class="color-green">$</span>
+              git push origin main
+              <span class="espaco-piscando cursor-mini"></span>
+            </div>
+            <div class="remote-line"></div>
+          </div>
+
+          <div class="github-panel">
+            <div class="github-content">
+              <div class="github-icon">
+                <i data-lucide="github"></i>
+              </div>
+              <div>
+                <p>04 · COLABORE</p>
+                <h3>GitHub</h3>
+                <p class="github-desc">
+                  Seu repositório deixa de existir apenas na sua máquina e passa
+                  a ser um espaço compartilhado para colaboração, revisão e
+                  integração.
+                </p>
+              </div>
+            </div>
+            <div class="github-stats">
+              <div>
+                <strong>12</strong>
+                <span>commits</span>
+              </div>
+              <div>
+                <strong>03</strong>
+                <span>branches</span>
+              </div>
+              <div>
+                <strong>08</strong>
+                <span>pull requests</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section>
-        <div>
-          <p>BRANCHES</p>
-          <h1>Trabalhe sem <span>quebrar tudo.</span></h1>
-          <p>
-            Branches permitem criar linhas paralelas de desenvolvimento. Você
-            pode experimentar uma funcionalidade, corrigir um bug ou testar uma
-            ideia sem comprometer a versão principal.
-          </p>
-          <ul>
-            <li>main — produção</li>
-            <li>feature/auth — nova funcionalidade</li>
-            <li>feature/ui — redesign</li>
-          </ul>
-        </div>
-        <div class="quadro">
-          <div class="cima">
-            <p>repository / gitbase</p>
-            <p>3 branches</p>
+      <section class="branch-section">
+        <div class="branch-layout">
+          <div class="branch-copy">
+            <p class="section-kicker"><span>――</span>ㅤBRANCHES</p>
+            <h1>Trabalhe sem <span class="color-purple">quebrar tudo.</span></h1>
+            <p class="color-gray">
+              Branches permitem criar linhas paralelas de desenvolvimento. Você
+              pode experimentar uma funcionalidade, corrigir um bug ou testar uma
+              ideia sem comprometer a versão principal.
+            </p>
+            <ul class="branch-list">
+              <li><span class="dot-purple"></span> main — produção</li>
+              <li>
+                <span class="dot-purple"></span> feature/auth — nova
+                funcionalidade
+              </li>
+              <li><span class="dot-purple"></span> feature/ui — redesign</li>
+            </ul>
           </div>
-          <!-- img com ramificações - branchs -->
+          <div class="branch-quadro">
+            <div class="branch-quadro-top">
+              <p>repository / gitbase</p>
+              <p>3 branches</p>
+            </div>
+            <div class="branch-tree">
+              <div class="branch-line line-main"></div>
+              <div class="branch-line line-feature"></div>
+              <div class="branch-line line-feature-2"></div>
+              <span class="branch-point bp-green bp1"></span>
+              <span class="branch-point bp-green bp2"></span>
+              <span class="branch-point bp-purple bp3"></span>
+              <span class="branch-point bp-blue bp4"></span>
+              <span class="branch-point bp-green bp5"></span>
+              <span class="branch-label label-auth">feature/auth</span>
+              <span class="branch-label label-main">main</span>
+              <span class="branch-label label-ui">feature/ui</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section>
-        <div>
-          <p>PRATIQUE</p>
+      <section class="commands-section">
+        <div class="commands-header">
+          <p class="section-kicker"><span>――</span>ㅤPRATIQUE</p>
           <h1>Explore os comandos.</h1>
-          <p>
+          <p class="color-gray">
             Selecione um comando e descubra o que realmente acontece por trás
             dele.
           </p>
         </div>
-        <div class="quadro">
+        <div class="command-app">
           <div class="lado_esquerdo">
             <p>GIT COMMANDS</p>
-            <button>git status</button>
-            <button>git add</button>
-            <button>git commit</button>
-            <button>git branch</button>
-            <button>git push</button>
-            <button>git pull</button>
+            <button class="command-button active" data-command="status">
+              git status
+            </button>
+            <button class="command-button" data-command="add">git add</button>
+            <button class="command-button" data-command="commit">
+              git commit
+            </button>
+            <button class="command-button" data-command="branch">
+              git branch
+            </button>
+            <button class="command-button" data-command="push">git push</button>
+            <button class="command-button" data-command="pull">git pull</button>
           </div>
           <div class="lado_direito">
             <div>
-              <h3>git add .</h3>
-              <p>
-                Move as alterações escolhidas para a staging area, preparando
-                exatamente o que será incluído no próximo commit.
+              <h3 id="commandTitle">git status</h3>
+              <p id="commandDescription">
+                Exibe o estado atual do diretório de trabalho e mostra quais
+                arquivos foram modificados, preparados ou ainda não rastreados.
               </p>
             </div>
-            <div class="quadro_interno"></div>
+            <div class="quadro_interno">
+              <div class="code-window-top">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="code-content" id="commandCode">
+                <p><span class="path-terminal">$ git status</span></p>
+                <p class="color-gray">On branch main</p>
+                <p class="color-red">modified: src/app.js</p>
+                <p class="color-green-light">nothing committed yet</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="gradient-ultima-section">
-        <div>
-          <p>GITBASE</p>
-          <h1>Seu próximo commit <span></span>começa aqui.</h1>
-          <p>
+        <div class="cta-header">
+          <p class="section-kicker"><span>――</span>ㅤGITBASE</p>
+          <h1>Seu próximo commit <span class="color-blue">começa aqui.</span></h1>
+          <p class="color-gray">
             O GitBase foi criado para você aprender Git e GitHub na prática.
             Explore os conceitos, siga os guias e teste seus conhecimentos.
           </p>
         </div>
-        <div>
-          <div>
-            <p>01</p>
+        <div class="cta-features">
+          <a href="./git.html" class="cta-feature">
+            <p class="cta-number">01</p>
             <h3>Aprenda Git</h3>
-            <p>entenda versionamento, commits, branchs e o fluxo do Git</p>
-          </div>
-          <div>
-            <p>02</p>
+            <p>Entenda versionamento, commits, branches e o fluxo do Git.</p>
+            <span class="cta-arrow">→</span>
+          </a>
+          <a href="./guias.html" class="cta-feature">
+            <p class="cta-number">02</p>
             <h3>Siga os guias</h3>
             <p>
               Aprenda passo a passo como usar Git e GitHub em projetos reais.
             </p>
-          </div>
-          <div>
-            <p>03</p>
+            <span class="cta-arrow">→</span>
+          </a>
+          <a href="./pratique.html" class="cta-feature">
+            <p class="cta-number">03</p>
             <h3>Pratique</h3>
             <p>
-              Teste seus conhecimentos e coloque o que voce aprendeu em ação
+              Teste seus conhecimentos e coloque o que você aprendeu em ação.
             </p>
-          </div>
+            <span class="cta-arrow">→</span>
+          </a>
         </div>
       </section>
     </main>
-    <footer class="container">
-      <div class="logo">
-        <img class="img_logo" src="../assets/logo.png" alt="" />
-        <p>GitBase .</p>
-      </div>
-      <p>Aprenda. Versione. Colabore.</p>
-      <div class="menu">
-        <a href="./index.html">Início</a>
-        <a href="./git.html">Git</a>
-        <a href="./github.html">Github</a>
-        <a href="./guias.html">Guias</a>
-        <a href="./pratique.html">Pratique</a>
-        <a href="./sobre.html">Sobre</a>
+    <footer>
+      <div class="container">
+        <div class="logo">
+          <img class="img_logo" src="./assets/logo.png" alt="" />
+          <p>GitBase <span>.</span></p>
+        </div>
+        <p>Aprenda. Versione. Colabore.</p>
+        <div class="menu">
+          <a href="./index.html">Início</a>
+          <a href="./git.html">Git</a>
+          <a href="./github.html">Github</a>
+          <a href="./guias.html">Guias</a>
+          <a href="./pratique.html">Pratique</a>
+          <a href="./sobre.html">Sobre</a>
+        </div>
       </div>
     </footer>
-    <script>
-      lucide.createIcons();
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>

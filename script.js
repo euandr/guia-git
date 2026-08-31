@@ -98,3 +98,4 @@ buttons.forEach((button) => {
     code.innerHTML = codeHTML(data.code);
   });
 });
+

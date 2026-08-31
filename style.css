@@ -105,7 +105,6 @@ h1 {
     radial-gradient(circle at 85% 35%, var(--color-green-glow), transparent 25%);
 }
 
-
 header {
   padding: 0.7rem 0rem;
   position: sticky;
@@ -451,26 +450,13 @@ section {
 footer {
   position: relative;
   width: 100%;
+  padding: 5rem 3rem 3rem 3rem;
   margin-top: 0;
-  padding: 4rem 0 5rem;
   border-top: 0.0625rem solid var(--color-border);
+  background-image: url("./assets/fundo-footer.jpg");
 }
 
-footer::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 100%;
-  height: 55rem;
-  pointer-events: none;
-  z-index: -1;
-  background: radial-gradient(
-    ellipse 80% 90% at 50% 100%,
-    var(--color-cta-glow),
-    transparent 70%
-  );
-}
+
 
 footer .container {
   display: flex;
@@ -479,8 +465,7 @@ footer .container {
   justify-content: space-between;
 }
 
-footer > p {
-  color: var(--color-text-dim);
+footer  p {
   font-size: 1.2rem;
 }
 
@@ -645,7 +630,8 @@ footer > p {
 
 .dot-green {
   background: var(--color-green-text);
-  box-shadow: 0 0 1rem color-mix(in srgb, var(--color-green-text) 50%, transparent);
+  box-shadow: 0 0 1rem
+    color-mix(in srgb, var(--color-green-text) 50%, transparent);
 }
 
 .dot-purple {
@@ -721,7 +707,8 @@ footer > p {
   gap: 1rem;
   flex: 1;
   min-width: 0;
-  border: 0.0625rem solid color-mix(in srgb, var(--color-border) 50%, transparent);
+  border: 0.0625rem solid
+    color-mix(in srgb, var(--color-border) 50%, transparent);
 }
 .small-square {
   background-color: var(--color-icon-blue-bg);
@@ -914,8 +901,7 @@ footer > p {
   gap: 3rem;
   margin: 2rem 3rem 3rem;
   padding: 2.8rem;
-  border: 0.0625rem solid
-    color-mix(in srgb, var(--color-blue) 17%, transparent);
+  border: 0.0625rem solid color-mix(in srgb, var(--color-blue) 17%, transparent);
   border-radius: 1.3rem;
   background:
     radial-gradient(

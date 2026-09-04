@@ -1,0 +1,608 @@
+/* =====================================================
+   CONFIGURAÇÕES GERAIS
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #080b0a;
+  color: #f1f5f2;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+  width: 100%;
+  border-bottom: 1px solid #1c2420;
+  background: #080b0a;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header nav {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.logo p {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #36d576;
+}
+
+
+/* MENU */
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.menu a {
+  color: #9ba59f;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #36d576;
+}
+
+
+/* BOTÃO HEADER */
+
+header button {
+  border: 1px solid #36d576;
+  background: transparent;
+  color: #36d576;
+  padding: 11px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+header button:hover {
+  background: #36d576;
+  color: #080b0a;
+}
+
+
+/* =====================================================
+   SEÇÕES
+===================================================== */
+
+main {
+  padding-bottom: 100px;
+}
+
+main > section {
+  padding: 110px 0;
+  border-bottom: 1px solid #18201c;
+}
+
+main > section:last-child {
+  border-bottom: none;
+}
+
+
+/* =====================================================
+   TEXTOS
+===================================================== */
+
+section > div:first-child > p:first-child {
+  color: #36d576;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(36px, 5vw, 62px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin-bottom: 25px;
+}
+
+h1 span {
+  color: #36d576;
+}
+
+h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 21px;
+  margin: 12px 0;
+}
+
+section > div:first-child > p:last-child {
+  max-width: 650px;
+  color: #929d97;
+  font-size: 16px;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+  min-height: 650px;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.hero-text > p:first-child {
+  color: #36d576;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 6vw, 76px);
+  max-width: 700px;
+}
+
+.hero-text > p:nth-of-type(2) {
+  max-width: 610px;
+  color: #929d97;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+
+/* BOTÕES HERO */
+
+.button1-hero,
+.button2-hero {
+  padding: 13px 22px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.button1-hero {
+  border: 1px solid #36d576;
+  background: #36d576;
+  color: #080b0a;
+}
+
+.button1-hero:hover {
+  background: #54e58b;
+  transform: translateY(-2px);
+}
+
+.button2-hero {
+  border: 1px solid #303a35;
+  background: transparent;
+  color: #d7ded9;
+}
+
+.button2-hero:hover {
+  border-color: #36d576;
+  color: #36d576;
+}
+
+
+/* =====================================================
+   TERMINAL
+===================================================== */
+
+.terminal {
+  background: #0d1210;
+  border: 1px solid #26302b;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+.terminal-top {
+  height: 48px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #202923;
+  background: #111713;
+}
+
+.terminal-top-left {
+  display: flex;
+  gap: 7px;
+}
+
+.circle {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.red {
+  background: #ff5f57;
+}
+
+.yellow {
+  background: #ffbd2e;
+}
+
+.green {
+  background: #28c840;
+}
+
+.terminal-top p {
+  font-family: "JetBrains Mono", monospace;
+  color: #6e7972;
+  font-size: 11px;
+}
+
+.terminal-content {
+  padding: 30px;
+  min-height: 280px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.terminal-content span {
+  color: #36d576;
+}
+
+.terminal-content .success {
+  color: #36d576;
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.quadros-cod-organizados {
+  margin-top: 55px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.quadro {
+  background: #0d1210;
+  border: 1px solid #202923;
+  border-radius: 8px;
+  padding: 28px;
+  transition: 0.3s;
+}
+
+.quadro:hover {
+  border-color: #36d576;
+  transform: translateY(-4px);
+}
+
+.quadro > p:first-child {
+  color: #36d576;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.quadro > p:not(:first-child) {
+  color: #818c86;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   GIT ≠ GITHUB
+===================================================== */
+
+.quadros-cod-organizados .quadro ul {
+  margin-top: 20px;
+  padding-left: 18px;
+  color: #929d97;
+  font-size: 14px;
+}
+
+.quadro li {
+  margin-bottom: 7px;
+}
+
+.quadro li::marker {
+  color: #36d576;
+}
+
+
+/* =====================================================
+   CONFIGURAÇÃO
+===================================================== */
+
+.codigo {
+  margin-top: 25px;
+  background: #080b0a;
+  border: 1px solid #1d2621;
+  border-radius: 6px;
+  padding: 20px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  overflow-x: auto;
+}
+
+.codigo p {
+  color: #c7d0ca;
+  margin-bottom: 7px;
+}
+
+.codigo p:last-child {
+  margin-bottom: 0;
+}
+
+.codigo span {
+  color: #36d576;
+}
+
+.quadro > p {
+  margin-top: 20px;
+  color: #818c86;
+}
+
+
+/* =====================================================
+   PARTE SUPERIOR DOS QUADROS
+===================================================== */
+
+.parte-cima,
+.cima {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 18px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #202923;
+}
+
+.parte-cima p,
+.cima p {
+  margin: 0 !important;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px !important;
+  color: #69756e !important;
+  letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   RESULTADO DO TERMINAL
+===================================================== */
+
+.resultado {
+  margin-top: 15px;
+  padding: 15px;
+  border-left: 2px solid #36d576;
+  background: #0a100d;
+}
+
+.resultado p {
+  margin: 0 !important;
+  font-family: "JetBrains Mono", monospace;
+  color: #36d576 !important;
+  font-size: 12px !important;
+}
+
+
+/* =====================================================
+   RESUMO
+===================================================== */
+
+main > section:last-child .quadro {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+main > section:last-child .quadro > div {
+  padding-right: 20px;
+  border-right: 1px solid #202923;
+}
+
+main > section:last-child .quadro > div:last-child {
+  border-right: none;
+}
+
+main > section:last-child .quadro > div > p:first-child {
+  font-size: 25px;
+  font-weight: 700;
+  color: #36d576;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+  border-top: 1px solid #202923;
+  padding: 45px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #060807;
+}
+
+footer > p {
+  color: #68736d;
+  font-size: 13px;
+}
+
+footer .menu {
+  gap: 20px;
+}
+
+footer .menu a {
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  header nav {
+    height: auto;
+    padding: 18px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  header .menu {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 70px 0;
+  }
+
+  .quadros-cod-organizados {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  main > section:last-child .quadro {
+    grid-template-columns: 1fr;
+  }
+
+  main > section:last-child .quadro > div {
+    border-right: none;
+    border-bottom: 1px solid #202923;
+    padding-bottom: 25px;
+  }
+
+  main > section:last-child .quadro > div:last-child {
+    border-bottom: none;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .container {
+    width: 92%;
+  }
+
+  header button {
+    display: none;
+  }
+
+  header .menu {
+    gap: 15px;
+  }
+
+  header .menu a {
+    font-size: 12px;
+  }
+
+  main > section {
+    padding: 75px 0;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .quadros-cod-organizados {
+    grid-template-columns: 1fr;
+  }
+
+  .button1-hero,
+  .button2-hero {
+    margin-bottom: 10px;
+  }
+
+  .terminal-content {
+    padding: 20px;
+    font-size: 11px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  footer .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}

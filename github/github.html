@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./github.css" />
+</head>
+<body>
+    <div class="circle-gradiente-blue-green"></div>
+    <header>
+      <nav class="container">
+        <div class="logo">
+          <img src="../assets/logo.png" alt="" />
+          <p>GitBase <span>.</span></p>
+        </div>
+        <div class="menu">
+          <a href="../index.html">Início</a>
+          <a href="../git.html">Git</a>
+          <a href="./github.html">Github</a>
+          <a href="../guias.html">Guias</a>
+          <a href="../pages/sobre.html">Sobre</a>
+        </div>
+        <button>Conhecer Github</button>        
+      </nav>
+    </header>
+
+    
+    <h1>GitHub <span>(Nuvem)</span>.</h1>
+    <h2>Seu Trabalho em Equipe na Nuvem</h2>
+    <p>
+        O GitHub é a plataforma web na nuvem onde os seus repositórios Git ganham vida colaborativa. Enquanto o Git cuida do histórico 
+        de versões no seu computador local, o GitHub centraliza o projeto na nuvem, permitindo que múltiplas pessoas trabalhem juntos, 
+        revisem o código dos colegas, organizem tarefas e evitem conflitos.
+    </p>
+
+    <h2>Ambiente Remoto e Segurança</h2>
+    <p>
+        Antes de enviar a primeira linha de código para o grupo, é preciso preparar o terreno: criar sua conta no servidor remoto e 
+        configurar as chaves de acesso.
+    </p>
+    <ol>
+        <li>
+            <h3>Criando sua Conta e Interface Web</h3>
+            <ol>
+                <li>Acesse <a href="https://github.com/">github.com</a> e crie uma conta.</li>
+                <li>Explore a interface principal:
+                    <ul>
+                        <li>Dashboard: Onde aparecem seus projetos e atualizações da equipe.</li>
+                        <li>Repositories (Repositórios): Onde ficam guardados os arquivos e o histórico de commits do seu grupo.</li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+        <li>
+            <h3>Autenticação Segura</h3>
+            <p>Por razões de segurança, o GitHub não permite usar sua senha tradicional para enviar comandos pelo terminal. Você deve configurar uma destas opções:</p>
+            <ul>
+                <li>Token de Acesso Pessoal (PAT): Uma senha gerada pelo site (Settings > Developer Settings > Personal Access Tokens) usada na hora de autenticar no terminal.</li>
+                <li>Chave SSH (Recomendado): Um par de chaves criptográficas que conecta seu computador ao GitHub de forma transparente e permanente.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Gerenciamento de Colaboradores</h3>
+            <p>Para que todo o grupo possa alterar o mesmo repositório:</p>
+            <ol>
+                <li>Vá até o repositório do projeto no site do GitHub.</li>
+                <li>Clique em Settings > Collaborators.</li>
+                <li>Clique em Add people e insira o nome de usuário ou e-mail dos colegas de grupo.</li>
+                <li>Cada membro receberá um convite por e-mail e precisará aceitá-lo para ter permissão de escrita.</li>
+            </ol>
+        </li>
+    </ol>
+    
+    <h2>Sincronização de Código (Local ⇆ Nuvem)</h2>
+    <p>Com a equipe cadastrada, o próximo passo é conectar o computador de cada membro ao servidor do GitHub.</p>
+    <p><span>[Seu Computador (Local)]  <--- git pull / git push --->  [GitHub (Nuvem)]</span></p>
+    <img src="../assets/git-vs-github.svg" alt="Visualização da interação entre Git e GitHub">
+    <h3>Comandos Fundamentais de Sincronização</h3>
+    <ol>
+        <li>
+            <h3>Clonando um repositório existente</h3>
+            <p>Se o projeto já foi criado no GitHub por um colega, você traz uma cópia completa para o seu PC: <code>git clone https://github.com/usuario/nome-do-projeto.git</code></p>
+        </li>
+        <li>
+            <h3>Vinculando uma pasta local nova à nuvem</h3>
+            <p>Se você começou o trabalho localmente e quer enviá-lo ao GitHub pela primeira vez: <code>git remote add origin https://github.com/usuario/nome-do-projeto.git</code></p>
+        </li>
+        <li>
+            <h3>Enviando atualizações para a nuvem (git push)</h3>
+            <p>Depois de fazer o git commit das suas alterações locais, envie-as para o GitHub: <code>git push origin main</code></p>
+        </li>
+        <li>
+            <h3>Atualizando seu código local (git pull)</h3>
+            <p>Antes de começar a trabalhar no dia, sempre baixe as alterações mais recentes enviadas pelos seus colegas: <code>git pull origin main</code></p>
+        </li>
+    </ol>  
+    <p><strong>Dica de ouro:</strong> Uma boa prática é sempre dar <code>git pull</code> no início do seu expediente de trabalho para evitar conflitos e não trabalhar em uma versão desatualizada do código!</p>
+
+    <h2>Fluxo de Trabalho em Equipe (GitHub Flow)</h2>
+    <p>Para evitar que duas pessoas alterem a versão principal (main) ao mesmo tempo e estraguem o projeto, adotamos o GitHub Flow.</p>
+
+    <h3>Trabalhando em Branches</h3>
+    <p>Nunca faça edições diretas na branch main. Crie uma branch para cada tarefa (ex: feature-login, ajuste-relatorio): <code>git checkout -b feature-login</code></p>
+
+    <h3>Pull Requests (PR)</h3>
+    <p>Quando terminar sua parte e fizer o push da sua branch para o GitHub, você abrirá um Pull Request:</p>
+
+    <h3>Code Review (Revisão de Código)</h3>
+    <p>O processo em que a equipe analisa o trabalho do colega direto pela interface do GitHub:</p>
+
+    <ul>
+        <li>É possível deixar comentários em linhas específicas do código.</li>
+        <li>Solicitar correções ou aprovar a alteração.</li>
+        <li>Isso garante que pelo menos duas pessoas viram o código antes dele ir para a versão final do trabalho.</li>
+    </ul>   
+    
+    <h3>Resolução de Conflitos de Merge</h3>
+    <p>Se você e um colega alterarem exatamente as mesmas linhas do mesmo arquivo em branches diferentes, o GitHub alertará um Conflito:</p>
+    <ol>
+        <li>O GitHub indicará quais arquivos estão em conflito.</li>
+        <li>Você pode usar a interface visual do próprio site ou o seu editor (como VS Code) para escolher qual versão manter (Accept Current, Accept Incoming ou Accept Both).</li>
+        <li>Após resolver o conflito, basta realizar o commit e finalizar o merge do PR.</li>
+    </ol>
+
+    <ol>
+        <li>
+            <h3>Trabalhando em Branches</h3>
+            <p>Nunca faça edições diretas na branch main. Crie uma branch para cada tarefa (ex: feature-login, ajuste-relatorio): <code>git checkout -b feature-login</code></p>
+        </li>
+        <li>
+            <h3>Pull Requests (PR)</h3>
+            <p>Quando terminar sua parte e fizer o push da sua branch para o GitHub, você abrirá um Pull Request:</p>
+            <ul>
+                <li>O PR é um pedido formal para "juntar" (merge) o seu código novo com a branch principal (main).</li>
+                <li>Nele, você descreve o que fez e marca seus colegas de grupo para analisarem.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Code Review (Revisão de Código)</h3>
+            <p>O processo em que a equipe analisa o trabalho do colega direto pela interface do GitHub:</p>
+            <ul>
+                <li>É possível deixar comentários em linhas específicas do código.</li>
+                <li>Solicitar correções ou aprovar a alteração.</li>
+                <li>Isso garante que pelo menos duas pessoas viram o código antes dele ir para a versão final do trabalho.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Resolução de Conflitos de Merge</h3>
+            <p>Se você e um colega alterarem exatamente as mesmas linhas do mesmo arquivo em branches diferentes, o GitHub alertará um Conflito:</p>
+            <ol>
+                <li>O GitHub indicará quais arquivos estão em conflito.</li>
+                <li>Você pode usar a interface visual do próprio site ou o seu editor (como VS Code) para escolher qual versão manter (Accept Current, Accept Incoming ou Accept Both).</li>
+                <li>Após resolver o conflito, basta realizar o commit e finalizar o merge do PR.</li>
+            </ol>
+        </li>
+    </ol>
+
+    <h2>Gerenciamento de Projetos Acadêmicos</h2>
+
+    <h3>GitHub Issues (Lista de Tarefas e Bugs)</h3>
+
+    <h3>GitHub Projects (Quadro Kanban)</h3>
+
+
+
+</body>
+</html>

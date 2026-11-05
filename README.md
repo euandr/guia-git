@@ -20,4 +20,4 @@ O site apresenta conteúdos sobre:
 
 ## 👨‍💻 Autores
 
-Desenvolvido por [@euandr](https://github.com/euandr), [@davi](https://github.com/euandr) e [@alana](https://github.com/euandr) .
+Desenvolvido por [@euandr](https://github.com/euandr), [@Davi-play07](https://github.com/Davi-play07) e [@AlanaSoaresSousa](https://github.com/AlanaSoaresSousa) .

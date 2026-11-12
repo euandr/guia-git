@@ -27,14 +27,28 @@
           <img src="../assets/imagens/geral/logo.png" alt="" />
           <p>GitBase <span>.</span></p>
         </div>
-        <div class="menu">
+        <div class="menu !hidden md:!flex">
           <a href="../index.html">Início</a>
           <a href="./git.html">Git</a>
           <a href="./github.html">Github</a>
           <a href="./guias.html">Guias</a>
           <a href="./sobre.html">Sobre</a>
         </div>
-        <button onclick="irParaGithub()">Conhecer Github</button>
+        <button class="!hidden md:!block" onclick="irParaGithub()">Conhecer Github</button>
+        <details class="group md:hidden">
+          <summary class="flex cursor-pointer list-none items-center justify-center text-[2.4rem] text-white [&::-webkit-details-marker]:hidden" aria-label="Abrir ou fechar menu">
+            <span class="group-open:hidden" aria-hidden="true">☰</span>
+            <span class="hidden group-open:inline" aria-hidden="true">✕</span>
+          </summary>
+          <div class="absolute left-0 top-full flex w-full flex-col items-start gap-5 border-b border-[#ffffff1a] bg-[#0b0f17] px-6 py-6 text-[1.3rem] text-[#b1bac4] shadow-lg [&>a:hover]:text-white">
+            <a href="../index.html">Início</a>
+            <a href="./git.html">Git</a>
+            <a href="./github.html">Github</a>
+            <a href="./guias.html">Guias</a>
+            <a href="./sobre.html">Sobre</a>
+            <button onclick="irParaGithub()">Conhecer Github</button>
+          </div>
+        </details>
       </nav> 
     </header>
 
@@ -50,7 +64,7 @@
       </section>
 
       <section class="indice-guias container">
-        <div class="cabecalho-guias">
+        <div class="cabecalho-guias max-md:!block">
           <div>
             <p class="marcador-secao"><span>――</span> APRENDA FAZENDO</p>
             <h2>Guias do GitBase</h2>
@@ -63,7 +77,7 @@
         <div class="lista-guias">
           <article class="item-guia">
             <button
-              class="botao-guia"
+              class="botao-guia max-md:!grid-cols-[3.5rem_minmax(0,1fr)_2.5rem]"
               aria-expanded="false"
               aria-controls="conteudo-guia-1"
             >
@@ -71,19 +85,19 @@
               <span class="titulo-guia"
                 >Criando e conectando seu repositório</span
               >
-              <span class="resumo-guia"
+              <span class="resumo-guia max-md:!col-start-2"
                 >Aprenda a criar um repositório local, criar o repositório
                 remoto no GitHub e conectar os dois.</span
               >
-              <span class="indicador-guia">+</span>
+              <span class="indicador-guia max-md:!col-start-3 max-md:!row-span-2 max-md:!row-start-1">+</span>
             </button>
             <div class="conteudo-guia" id="conteudo-guia-1" hidden>
-              <div class="interno-guia">
+              <div class="interno-guia max-md:!px-0">
                 <p class="objetivo-guia">
                   <strong>Objetivo</strong> Começar um projeto no computador
                   utilizando Git e conectá-lo a um repositório no GitHub.
                 </p>
-                <div class="colunas-guia">
+                <div class="colunas-guia max-md:!grid-cols-1 max-md:!gap-8">
                   <div>
                     <h3>01. Criando a pasta do projeto</h3>
                     <p>
@@ -159,25 +173,25 @@ GitHub
 
           <article class="item-guia">
             <button
-              class="botao-guia"
+              class="botao-guia max-md:!grid-cols-[3.5rem_minmax(0,1fr)_2.5rem]"
               aria-expanded="false"
               aria-controls="conteudo-guia-2"
             >
               <span class="numero-guia">02</span
               ><span class="titulo-guia"
                 >Enviando seu projeto para o GitHub</span
-              ><span class="resumo-guia"
+              ><span class="resumo-guia max-md:!col-start-2"
                 >Aprenda a registrar suas alterações e enviar seu projeto local
                 para o repositório remoto.</span
-              ><span class="indicador-guia">+</span>
+              ><span class="indicador-guia max-md:!col-start-3 max-md:!row-span-2 max-md:!row-start-1">+</span>
             </button>
             <div class="conteudo-guia" id="conteudo-guia-2" hidden>
-              <div class="interno-guia">
+              <div class="interno-guia max-md:!px-0">
                 <p class="objetivo-guia">
                   <strong>Objetivo</strong> Registrar alterações no histórico
                   local e enviá-las para o GitHub com segurança.
                 </p>
-                <div class="colunas-guia">
+                <div class="colunas-guia max-md:!grid-cols-1 max-md:!gap-8">
                   <div>
                     <h3>01. Verificando alterações</h3>
                     <p>
@@ -235,25 +249,25 @@ GitHub
 
           <article class="item-guia">
             <button
-              class="botao-guia"
+              class="botao-guia max-md:!grid-cols-[3.5rem_minmax(0,1fr)_2.5rem]"
               aria-expanded="false"
               aria-controls="conteudo-guia-3"
             >
               <span class="numero-guia">03</span
               ><span class="titulo-guia">Baixando e atualizando um projeto</span
-              ><span class="resumo-guia"
+              ><span class="resumo-guia max-md:!col-start-2"
                 >Aprenda a clonar um projeto do GitHub e baixar novas alterações
                 para o seu repositório local.</span
-              ><span class="indicador-guia">+</span>
+              ><span class="indicador-guia max-md:!col-start-3 max-md:!row-span-2 max-md:!row-start-1">+</span>
             </button>
             <div class="conteudo-guia" id="conteudo-guia-3" hidden>
-              <div class="interno-guia">
+              <div class="interno-guia max-md:!px-0">
                 <p class="objetivo-guia">
                   <strong>Objetivo</strong> Entender a diferença entre obter um
                   projeto pela primeira vez e atualizar um projeto que já está
                   no computador.
                 </p>
-                <div class="colunas-guia">
+                <div class="colunas-guia max-md:!grid-cols-1 max-md:!gap-8">
                   <div>
                     <h3>01. Clonando pela primeira vez</h3>
                     <p>
@@ -299,26 +313,26 @@ Projeto local atualizado</code></pre>
 
           <article class="item-guia">
             <button
-              class="botao-guia"
+              class="botao-guia max-md:!grid-cols-[3.5rem_minmax(0,1fr)_2.5rem]"
               aria-expanded="false"
               aria-controls="conteudo-guia-4"
             >
               <span class="numero-guia">04</span
               ><span class="titulo-guia"
                 >Trabalhando com Branches, Merge e Conflitos</span
-              ><span class="resumo-guia"
+              ><span class="resumo-guia max-md:!col-start-2"
                 >Aprenda a criar branches, juntar alterações com merge e
                 resolver conflitos.</span
-              ><span class="indicador-guia">+</span>
+              ><span class="indicador-guia max-md:!col-start-3 max-md:!row-span-2 max-md:!row-start-1">+</span>
             </button>
             <div class="conteudo-guia" id="conteudo-guia-4" hidden>
-              <div class="interno-guia">
+              <div class="interno-guia max-md:!px-0">
                 <p class="objetivo-guia">
                   <strong>Objetivo</strong> Desenvolver em uma linha separada,
                   integrar o trabalho na <code>main</code> e entender o que
                   fazer quando alterações entram em conflito.
                 </p>
-                <div class="colunas-guia">
+                <div class="colunas-guia max-md:!grid-cols-1 max-md:!gap-8">
                   <div>
                     <h3>01. Criando e trocando de branch</h3>
                     <p>
@@ -396,25 +410,25 @@ git commit -m "Resolve conflito"</code></pre>
 
           <article class="item-guia">
             <button
-              class="botao-guia"
+              class="botao-guia max-md:!grid-cols-[3.5rem_minmax(0,1fr)_2.5rem]"
               aria-expanded="false"
               aria-controls="conteudo-guia-5"
             >
               <span class="numero-guia">05</span
               ><span class="titulo-guia">Desfazendo alterações</span
-              ><span class="resumo-guia"
+              ><span class="resumo-guia max-md:!col-start-2"
                 >Aprenda a voltar atrás em alterações e corrigir erros durante o
                 desenvolvimento.</span
-              ><span class="indicador-guia">+</span>
+              ><span class="indicador-guia max-md:!col-start-3 max-md:!row-span-2 max-md:!row-start-1">+</span>
             </button>
             <div class="conteudo-guia" id="conteudo-guia-5" hidden>
-              <div class="interno-guia">
+              <div class="interno-guia max-md:!px-0">
                 <p class="objetivo-guia">
                   <strong>Objetivo</strong> Escolher a ferramenta adequada para
                   desfazer uma alteração, tirar algo do staging ou reverter um
                   commit.
                 </p>
-                <div class="lista-desfazer">
+                <div class="lista-desfazer max-md:!grid-cols-1">
                   <div>
                     <code>git restore arquivo.txt</code>
                     <p>
@@ -469,20 +483,20 @@ git commit -m "Resolve conflito"</code></pre>
 
           <article class="item-guia">
             <button
-              class="botao-guia"
+              class="botao-guia max-md:!grid-cols-[3.5rem_minmax(0,1fr)_2.5rem]"
               aria-expanded="false"
               aria-controls="conteudo-guia-6"
             >
               <span class="numero-guia">06</span
               ><span class="titulo-guia"
                 >Colaborando em um projeto no GitHub</span
-              ><span class="resumo-guia"
+              ><span class="resumo-guia max-md:!col-start-2"
                 >Aprenda um fluxo básico de colaboração usando branches, Pull
                 Requests e GitHub.</span
-              ><span class="indicador-guia">+</span>
+              ><span class="indicador-guia max-md:!col-start-3 max-md:!row-span-2 max-md:!row-start-1">+</span>
             </button>
             <div class="conteudo-guia" id="conteudo-guia-6" hidden>
-              <div class="interno-guia">
+              <div class="interno-guia max-md:!px-0">
                 <p class="objetivo-guia">
                   <strong>Objetivo</strong> Trabalhar com outras pessoas sem
                   alterar diretamente a branch principal e usando revisão antes
@@ -492,7 +506,7 @@ git commit -m "Resolve conflito"</code></pre>
                   class="fluxo-amplo fluxo-colaboracao fluxo-horizontal"
                 ><code>GitHub  →  clone  →  criar branch  →  alterações  →  commit  →  push  →  Pull Request  →  revisão  →  merge</code></pre>
 
-                <div class="colunas-guia">
+                <div class="colunas-guia max-md:!grid-cols-1 max-md:!gap-8">
                   <div>
                     <h3>01. Cada pessoa usa uma branch</h3>
                     <p>
@@ -586,7 +600,7 @@ Push → Pull Request → Files changed → Review
       </section>
 
       <section class="secao-recursos container" id="aprofundar">
-        <div class="cabecalho-recursos">
+        <div class="cabecalho-recursos max-md:!block">
           <p class="marcador-secao"><span>――</span> CONTINUE O ESTUDO</p>
           <h2>Cursos</h2>
           <p>Conteúdos guiados para transformar prática em repertório.</p>
@@ -620,11 +634,11 @@ Push → Pull Request → Files changed → Review
       </section>
 
       <section class="secao-recursos secao-materiais container">
-        <div class="cabecalho-recursos">
+        <div class="cabecalho-recursos max-md:!block">
           <p class="marcador-secao"><span>――</span> REFERÊNCIAS</p>
           <h2>Documentação e materiais</h2>
         </div>
-        <div class="lista-materiais">
+        <div class="lista-materiais max-md:[&_a]:!grid-cols-[1fr_auto] max-md:[&_.tipo-material]:!col-span-2">
           <a
             href="https://git-scm.com/docs/git/pt_BR#_os_comandos_do_git"
             target="_blank"
@@ -661,11 +675,11 @@ Push → Pull Request → Files changed → Review
       </section>
 
       <section class="secao-videos container">
-        <div class="cabecalho-recursos">
+        <div class="cabecalho-recursos max-md:!block">
           <p class="marcador-secao"><span>――</span> ASSISTA E PRATIQUE</p>
           <h2>Vídeos recomendados</h2>
         </div>
-        <div class="grade-videos">
+        <div class="grade-videos max-md:!grid-cols-1">
           <a
             href="https://youtu.be/LkBjOeoHBhA"
             target="_blank"
@@ -713,7 +727,7 @@ Push → Pull Request → Files changed → Review
       </section>
 
       <section class="referencia-git container" id="referencia-comandos">
-        <div class="cabecalho-recursos referencia-cabecalho">
+        <div class="cabecalho-recursos referencia-cabecalho max-md:!block">
           <div>
             <p class="marcador-secao"><span>――</span> CONSULTA RÁPIDA</p>
             <h2>Referência de comandos Git</h2>
@@ -724,10 +738,10 @@ Push → Pull Request → Files changed → Review
           </p>
         </div>
 
-        <div class="referencia-painel">
-          <aside class="lista-comandos" aria-label="Comandos Git por categoria">
+        <div class="referencia-painel max-md:!h-auto max-md:!grid-cols-1">
+          <aside class="lista-comandos max-md:!h-auto max-md:!border-r-0 max-md:!border-b" aria-label="Comandos Git por categoria">
             <h3 class="titulo-principais-comandos">Principais comandos</h3>
-            <div class="lista-comandos-scroll">
+            <div class="lista-comandos-scroll max-md:!h-[28rem] max-md:!flex-none">
               <div class="categoria-comandos">
                 <h3>Básico</h3>
                 <button
@@ -889,11 +903,11 @@ Push → Pull Request → Files changed → Review
             </div>
           </aside>
 
-          <div class="detalhe-comando">
+          <div class="detalhe-comando max-md:!p-6">
             <p class="rotulo-comando">COMANDO SELECIONADO</p>
             <h3 id="referenciaTitulo">git init</h3>
             <p id="referenciaDescricao"></p>
-            <div class="dados-comando">
+            <div class="dados-comando max-md:!grid-cols-1">
               <div>
                 <strong>Uso</strong>
                 <pre><code id="referenciaUso"></code></pre>
@@ -923,7 +937,7 @@ Push → Pull Request → Files changed → Review
       </section>
 
       <section class="trilha-aprendizado container">
-        <div class="cabecalho-recursos">
+        <div class="cabecalho-recursos max-md:!block">
           <p class="marcador-secao"><span>――</span> PRÓXIMO PASSO</p>
           <h2>Não sabe por onde começar?</h2>
           <p>
@@ -931,7 +945,7 @@ Push → Pull Request → Files changed → Review
             materiais recomendados para aprofundar seus conhecimentos.
           </p>
         </div>
-        <div class="linha-trilha">
+        <div class="linha-trilha max-md:!grid-cols-1 max-md:[&>i]:rotate-90 max-md:[&>i]:justify-self-start">
           <a href="./git.html"
             ><span>01</span><strong>GIT</strong><small>Fundamentos</small></a
           ><i class="fa-solid fa-arrow-right"></i
@@ -951,8 +965,8 @@ Push → Pull Request → Files changed → Review
         </div>
       </section>
     </main>
-    <footer>
-      <div class="container">
+    <footer class="mb-6">
+      <div class="container max-md:!flex-col max-md:!gap-4">
         <p>© 2026 GitBase</p>
         <p>Aprenda. Versione. Colabore.</p>
       </div>

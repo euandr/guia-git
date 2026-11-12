@@ -12,7 +12,7 @@
   margin-top: 0;
 }
 
-.heroi-guias {
+.pagina-guias .heroi-guias {
   padding-top: 8rem;
   padding-bottom: 8rem;
   border-bottom: 0.0625rem solid
@@ -49,7 +49,7 @@
   line-height: 1.7;
 }
 
-.indice-guias {
+.pagina-guias .indice-guias {
   padding-top: 9rem;
   padding-bottom: 11rem;
 }
@@ -370,9 +370,9 @@
   font-size: 1.1rem;
 }
 
-.secao-recursos,
-.secao-videos,
-.trilha-aprendizado {
+.pagina-guias .secao-recursos,
+.pagina-guias .secao-videos,
+.pagina-guias .trilha-aprendizado {
   padding-top: 8rem;
   padding-bottom: 9rem;
   border-top: 0.0625rem solid
@@ -502,7 +502,7 @@
   font-size: 1.6rem;
 }
 
-.trilha-aprendizado {
+.pagina-guias .trilha-aprendizado {
   padding-bottom: 12rem;
 }
 
@@ -560,7 +560,7 @@
   color: var(--color-blue);
 }
 
-.referencia-git {
+.pagina-guias .referencia-git {
   padding-top: 8rem;
   padding-bottom: 9rem;
   border-top: 0.0625rem solid

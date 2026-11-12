@@ -21,7 +21,7 @@
           <p>GitBase <span>.</span></p>
         </div>
 
-        <div class="menu">
+        <div class="menu !hidden md:!flex">
           <a href="../index.html">Início</a>
           <a href="./git.html">Git</a>
           <a href="./github.html">Github</a>
@@ -29,28 +29,42 @@
           <a href="./sobre.html">Sobre</a>
         </div>
 
-        <button onclick="irParaGithub()">Conhecer Github</button>
+        <button class="!hidden md:!block" onclick="irParaGithub()">Conhecer Github</button>
+        <details class="group md:hidden">
+          <summary class="flex cursor-pointer list-none items-center justify-center text-[2.4rem] text-white [&::-webkit-details-marker]:hidden" aria-label="Abrir ou fechar menu">
+            <span class="group-open:hidden" aria-hidden="true">☰</span>
+            <span class="hidden group-open:inline" aria-hidden="true">✕</span>
+          </summary>
+          <div class="absolute left-0 top-full flex w-full flex-col items-start gap-5 border-b border-[#ffffff1a] bg-[#0b0f17] px-6 py-6 text-[1.3rem] text-[#b1bac4] shadow-lg [&>a:hover]:text-white">
+            <a href="../index.html">Início</a>
+            <a href="./git.html">Git</a>
+            <a href="./github.html">Github</a>
+            <a href="./guias.html">Guias</a>
+            <a href="./sobre.html">Sobre</a>
+            <button onclick="irParaGithub()">Conhecer Github</button>
+          </div>
+        </details>
       </nav>
     </header>
     <main>
-        <section class="container sobre" >
+        <section class="container sobre max-md:[&_br]:hidden" >
             <p class="sob-h1">⎯⎯ conheça o projeto</p>
-            <h1>Sobre o <span>GitBase</span></h1>
+            <h1 class="max-md:!text-[4.5rem]">Sobre o <span>GitBase</span></h1>
             <p>O GitBase é uma plataforma educacional criada para tornar o aprendizado de Git e GitHub mais <br> simples, visual e acessível.</p>
             <p>Aqui você encontra explicações, exemplos e guias práticos para entender desde os conceitos <br> básicos de versionamento até o uso das principais ferramentas do Git e GitHub.</p>
             <p>Nosso objetivo é ajudar quem está começando a programar a desenvolver confiança para trabalhar <br> com seus próprios projetos e colaborar com outras pessoas.</p>
         </section>
         <hr>
-        <section class="container">
-          <div class="div-section3">
+        <section class="container hover:scale-105 transition-transform duration-500 ease-in-out">
+            <div class="div-section3 max-md:!flex-col max-md:!items-start max-md:!gap-6 max-md:!p-6">
             <div class="existe-left">
               <p  class="sob-h1">⎯⎯ Nossa motivação</p>
-              <h1>Por que o <br> GitBase existe?</h1>
+              <h1 class="max-md:!text-[4rem]">Por que o <br> GitBase existe?</h1>
             </div>
-            <div class="existe-right">
+            <div class="existe-right max-md:!ml-0 max-md:[&_br]:hidden">
               <p>Aprender Git pode ser confuso no começo. Comandos, branches, commits,<br> repositórios e tantos outros conceitos podem transformar algo que deveria <br> facilitar o desenvolvimento em uma barreira para quem está começando.</p>
               <p>O GitBase surgiu para tornar esse processo mais simples. Em vez de apenas <br> apresentar comandos, buscamos explicar o que eles fazem, quando utilizá-los <br> e como eles se encaixam no fluxo de desenvolvimento.</p>
-              <div class="div-frase-de-efeito">
+              <div class="div-frase-de-efeito my-6 py-6 hover:scale-105 transition-transform duration-300 ease-in-out">
                 <p>"Menos decoreba. <span>Mais compreensão.</span>"</p>
               </div>
             </div>
@@ -58,17 +72,17 @@
         </section  >
         <hr>
         <section class="container ">
-          <div class=" section4">
+          <div class="section4 max-md:[&_br]:hidden">
             <p class="sob-h1">⎯⎯  Quem somos</p>
-            <h1>Três pessoas, um projeto</h1>
+            <h1 class="max-md:!text-center max-md:!text-[4rem]">Três pessoas, um projeto</h1>
             <p>Somos estudantes do curso de Análise e Desenvolvimento de Sistemas, e o GitBase nasceu como <br> um projeto para compartilhar conhecimento sobre Git e GitHub de forma simples, prática e <br>acessível.</p>
             <p>Cada integrante contribuiu para transformar a ideia em uma experiência de aprendizado, unindo <br> conhecimentos de programação, desenvolvimento web e organização de conteúdo.</p>
-            <div class="section4-down">
-              <div class="div-user">
+            <div class="section4-down max-[1199px]:!flex-wrap max-[1199px]:!justify-center">
+              <div class="div-user max-md:!w-full">
                 <div class="perfil"><p>AF</p></div>
                 <h3>André Farias </h3>
                 <p>Desenvolvedor e Estudande ADS</p>
-               <div class="div-social">
+               <div class="div-social max-md:!flex-wrap max-md:!justify-center">
                   <a href="https://github.com/euandr" target="_blank">
                     <i class="fa-brands fa-github"></i>
                     GitHub
@@ -80,11 +94,11 @@
                   </a>
                 </div>
               </div>
-              <div class="div-user">
+              <div class="div-user max-md:!w-full">
                 <div class="perfil"><p>DV</p></div>
                 <h3>Davi Viturino</h3>
                 <p>Desenvolvedor e Estudande ADS</p>
-               <div class="div-social">
+               <div class="div-social max-md:!flex-wrap max-md:!justify-center">
                   <a href="https://github.com/Davi-Play07" target="_blank">
                     <i class="fa-brands fa-github"></i>
                     GitHub
@@ -96,11 +110,11 @@
                   </a>
                 </div>
               </div>
-              <div class="div-user">
+              <div class="div-user max-md:!w-full">
                 <div class="perfil"><p>AS</p></div>
                 <h3>Alana Soares</h3>
                 <p>Desenvolvedor e Estudande ADS</p>
-               <div class="div-social">
+               <div class="div-social max-md:!flex-wrap max-md:!justify-center">
                   <a href="https://github.com/AlanaSoaresSousa" target="_blank">
                     <i class="fa-brands fa-github"></i>
                     GitHub
@@ -118,22 +132,22 @@
 
         <hr>
 
-        <section class="container section5">
-          <div class="section5-left">
+        <section class="container section5 max-[1199px]:!flex-col max-[1199px]:!items-stretch">
+          <div class="section5-left max-[1199px]:!w-full">
             <p class="sob-h1">⎯⎯  Contribuição</p>
-            <h1>Apoie o GitBase 💙</h1>
+            <h1 class="max-md:!text-[4rem]">Apoie o GitBase 💙</h1>
             <p>O GitBase é um projeto criado para compartilhar conhecimento de forma gratuita. Somos uma equipe que acredita que materiais de qualidade podem ajudar muitas pessoas a dar seus primeiros passos no desenvolvimento de software.</p>
             <p>Para continuar mantendo o projeto, criando novos conteúdos e melhorando a plataforma, contamos com o apoio de quem acredita nessa ideia. Se o GitBase foi útil para você, qualquer valor será bem-vindo.</p>
-            <div class="div-btns">
+            <div class="div-btns max-md:!flex-wrap">
               <button onclick="darEstrela()">⭐ Dar uma estrela no github</button>
               <button onclick="compartilharProjeto()"> 🔗 Compartilhar o projeto</button>
             </div>
           </div>
           <div class="section5-right">
-            <div class="div-qrcode">
+            <div class="div-qrcode max-md:!px-6">
               <img src="../assets/qrcode.png" alt="qrcode pix">
               <p>chave pix</p>
-              <div class="div-chave-pix">
+              <div class="div-chave-pix max-md:!max-w-full">
                 <p id="chavePix">217facb7-b823-4ece-9379-e3e2f1a3b86b</p>
                 <button onclick="copiarPix()"><i class="fa-solid fa-copy"></i></button>
               </div>
@@ -141,11 +155,11 @@
           </div>
         </section>
     </main>
-    <footer>
-      <div class="container">
+    <footer class="mb-6">
+      <div class="container max-md:!flex-col max-md:!gap-4">
         <p>© 2026 GitBase</p>
         <p>Aprenda. Versione. Colabore.</p>
-        <p>Feito para aprender Git e GitHub.</p
+        <p>Feito para aprender Git e GitHub.</p>
       </div>
     </footer>
     <script src="../script.js"></script>

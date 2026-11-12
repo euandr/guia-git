@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GitBase - aprenda git e github de forma simples</title>
     
-    <link rel="stylesheet" href="./style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <link rel="stylesheet" href="./style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,6 +18,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
+
 
     
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -33,7 +33,7 @@
           <p>GitBase <span>.</span></p>
         </div>
 
-        <div class="menu">
+        <div class="menu !hidden md:!flex [&>a]:transition-transform [&>a]:duration-300 [&>a:hover]:scale-105">
           <a href="./index.html">Início</a>
           <a href="./pages/git.html">Git</a>
           <a href="./pages/github.html">Github</a>
@@ -41,31 +41,46 @@
           <a href="./pages/sobre.html">Sobre</a>
         </div>
 
-        <button onclick="irParaGithub()">Conhecer Github</button>
+        <button class="!hidden md:!block transition-transform duration-300 hover:scale-105" onclick="irParaGithub()">Conhecer Github</button>
+
+        <details class="group md:hidden">
+          <summary class="flex cursor-pointer list-none items-center justify-center text-[2.4rem] text-white [&::-webkit-details-marker]:hidden" aria-label="Abrir ou fechar menu">
+            <span class="group-open:hidden" aria-hidden="true">☰</span>
+            <span class="hidden group-open:inline" aria-hidden="true">✕</span>
+          </summary>
+          <div class="absolute left-0 top-full flex w-full flex-col items-start gap-5 border-b border-[#ffffff1a] bg-[#0b0f17] px-6 py-6 text-[1.3rem] text-[#b1bac4] shadow-lg [&>a:hover]:text-white">
+            <a href="./index.html">Início</a>
+            <a href="./pages/git.html">Git</a>
+            <a href="./pages/github.html">Github</a>
+            <a href="./pages/guias.html">Guias</a>
+            <a href="./pages/sobre.html">Sobre</a>
+            <button class="transition-transform duration-300 hover:scale-105" onclick="irParaGithub()">Conhecer Github</button>
+          </div>
+        </details>
         
       </nav>
     </header>
 
     <main class="container">
-      <section>
-        <div class="hero">
+      <section class="max-[1199px]:!pb-24">
+        <div class="hero max-[1199px]:!flex-col max-[1199px]:gap-8">
           <div class="hero-text">
-            <h1>Controle seu código. <span>Domine seus projetos.</span></h1>
-            <p>
+            <h1 class="max-md:!text-[4.5rem] md:max-[1199px]:!text-[6.5rem]">Controle seu código. <span>Domine seus projetos.</span></h1>
+            <p class="my-5 max-md:!mr-0">
               Pare de decorar comandos sem entender o que acontece. Visualize o
               fluxo, entenda cada etapa e descubra como Git e GitHub realmente
               funcionam no desenvolvimento.
             </p>
             <button 
             onclick="irParaGit()"
-            class="button1-hero">Ver como funciona</button>
+            class="button1-hero transition-transform duration-300 hover:scale-105">Ver como funciona</button>
             <button
-            onclick="irParaGuias()" class="button2-hero">Explorar guias</button>
+            onclick="irParaGuias()" class="button2-hero max-[400px]:!ml-0 max-[400px]:!mt-4 transition-transform duration-300 hover:scale-105">Explorar guias</button>
           </div>
 
-          <div class="terminal">
-            <div class="terminal-top">
-              <div class="terminal-top-left">
+          <div class="terminal max-[1199px]:!w-full max-[1199px]:!my-8 transition-transform duration-300 hover:scale-105">
+            <div class="terminal-top max-md:!gap-4">
+              <div class="terminal-top-left max-md:!pr-0">
                 <div class="circle red"></div>
                 <div class="circle yellow"></div>
                 <div class="circle green"></div>
@@ -95,7 +110,7 @@
                 <span class="espaco-piscando"></span>
               </p>
 
-              <div class="terminal-info">
+              <div class="terminal-info max-[1199px]:!right-0 max-md:!static max-md:!w-full">
                 <div class="top-subterminal">
                   <p class="color-gray">COMMITS</p>
                   <p class="color-green">sync</p>
@@ -123,15 +138,15 @@
 
 
 
-      <section class="background-gray">
-        <div class="section2-top">
-          <div class="div-title">
-            <p><span>――</span>ㅤPOR QUE GIT?</p>
-            <h1>
+      <section class="background-gray max-[1199px]:!pb-24">
+        <div class="section2-top max-[1199px]:!flex-col max-[1199px]:!gap-8">
+          <div class="div-title max-[1199px]:!w-full">
+            <p class="kicker-label"><span>――</span> POR QUE GIT?</p>
+            <h1 class="max-md:!text-[4.5rem]">
               Código sem controle <span class="color-gray">vira caos.</span>
             </h1>
           </div>
-          <p class="color-gray">
+          <p class="color-gray max-[1199px]:!w-full max-[1199px]:!mt-0">
             Arquivos Duplicados, alterações perdidas, medo de mexer no código e
             pastas como
             <span class="color-gray-maisclaro"
@@ -141,8 +156,8 @@
           </p>
         </div>
 
-        <div class="section2-quadros">
-          <div class="quadro1">
+        <div class="section2-quadros max-md:!flex-col">
+          <div class="quadro1 hover:scale-105 transition-transform duration-500 ease-in-out">
             <p class="card-label">O PROBLEMA</p>
             <p class="card-badge-red">WITHOUT GIT</p>
             <div class="chaos-files">
@@ -153,32 +168,32 @@
               <div class="file">projeto-backup.zip</div>
             </div>
           </div>
-          <i data-lucide="move-right"></i>
-          <div class="quadro2">
+          <i class="max-md:!my-0 max-md:self-center max-md:rotate-90" data-lucide="move-right"></i>
+          <div class="quadro2 hover:scale-105 transition-transform duration-500 ease-in-out">
             <p class="card-label">A SOLUÇÃO</p>
             <p class="card-badge-green">WITH GIT</p>
             <div class="solution-flow">
-              <div class="solution-row">
+              <div class="solution-row hover:scale-105 transition-transform duration-500 ease-in-out">
                 <span class="dot-green"></span>
                 working tree
                 <span>alterações</span>
               </div>
-              <div class="solution-row">
+              <div class="solution-row hover:scale-105 transition-transform duration-500 ease-in-out">
                 <span class="dot-green"></span>
                 staging area
                 <span>preparação</span>
               </div>
-              <div class="solution-row">
+              <div class="solution-row hover:scale-105 transition-transform duration-500 ease-in-out">
                 <span class="dot-green"></span>
                 commit
                 <span>snapshot</span>
               </div>
-              <div class="solution-row">
+              <div class="solution-row hover:scale-105 transition-transform duration-500 ease-in-out">
                 <span class="dot-green"></span>
                 history
                 <span>controle</span>
               </div>
-              <div class="solution-row">
+              <div class="solution-row hover:scale-105 transition-transform duration-500 ease-in-out">
                 <span class="dot-green"></span>
                 remote
                 <span>colaboração</span>
@@ -188,16 +203,16 @@
         </div>
       </section>
 
-      <section >
-        <div class="section2-top">
-          <div class="div-title">
-            <p><span>――</span>ㅤO FLUXO</p>
-            <h1>
+      <section class="max-[1199px]:!pb-24">
+        <div class="section2-top max-[1199px]:!flex-col max-[1199px]:!gap-8">
+          <div class="div-title max-[1199px]:!w-full">
+            <p class="kicker-label"><span>――</span> O FLUXO</p>
+            <h1 class="max-md:!text-[4.5rem]">
               Seu código.<span class="color-blue"> Um histórico.</span>
-              ㅤㅤUma equipe.
+              Uma equipe.
             </h1>
           </div>
-          <div class="section3-right">
+          <div class="section3-right max-[1199px]:!w-full max-[1199px]:!mt-0">
             <p>
               <span class="color-orange">Git </span>controla cada mudança na sua
               máquina.
@@ -209,15 +224,15 @@
           </div>
         </div>
         <div class="section3-quadro">
-          <div class="quadro-top-section3">
+          <div class="quadro-top-section3 max-md:!flex-wrap max-md:gap-4">
             <p>DEVELOPMENT WORKFLOW</p>
             <p class="status-connected">
               <span class="dot-green"></span>
               repository connected
             </p>
           </div>
-          <div class="quadros-internos-section3">
-            <div class="quadro-no-quadro">
+          <div class="quadros-internos-section3 max-[1199px]:!flex-col max-md:!p-5">
+            <div class="quadro-no-quadro hover:scale-105 transition-transform duration-500 ease-in-out">
               <div class="small-square">
                 <i class="color-blue" data-lucide="file-text"></i>
               </div>
@@ -234,12 +249,12 @@
               </div>
             </div>
 
-            <div class="flow-connector">
+            <div class="flow-connector ">
               <span>git add</span>
               <div class="connector-line"></div>
             </div>
 
-            <div class="quadro-no-quadro">
+            <div class="quadro-no-quadro hover:scale-105 transition-transform duration-500 ease-in-out">
               <div class="small-square-purple">
                 <i class="color-purple" data-lucide="plus"></i>
               </div>
@@ -248,25 +263,25 @@
               <p>
                 Escolha exatamente quais mudanças entrarão no próximo snapshot.
               </p>
-              <div class="staging-div">
-                <div class="item-staging">
+              <div class="staging-div ">
+                <div class="item-staging hover:scale-105 transition-transform duration-300 ease-in-out">
                   <p>✓ app.js</p>
                 </div>
-                <div class="item-staging">
+                <div class="item-staging hover:scale-105 transition-transform duration-300 ease-in-out">
                   <p>✓ style.css</p>
                 </div>
-                <div class="item-staging">
+                <div class="item-staging hover:scale-105 transition-transform duration-300 ease-in-out">
                   <p>✓ index.html</p>
                 </div>
               </div>
             </div>
 
-            <div class="flow-connector">
+            <div class="flow-connector ">
               <span>git commit</span>
               <div class="connector-line"></div>
             </div>
 
-            <div class="quadro-no-quadro">
+            <div class="quadro-no-quadro hover:scale-105 transition-transform duration-500 ease-in-out">
               <div class="small-square-green">
                 <i
                   class="color-green-light"
@@ -315,7 +330,7 @@
             <div class="remote-line"></div>
           </div>
 
-          <div class="github-panel">
+          <div class="github-panel max-md:!flex-col max-md:!items-start max-md:!mx-5 hover:scale-105 transition-transform duration-500 ease-in-out">
             <div class="github-content">
               <div class="github-icon">
                 <i class="fa-brands fa-github"></i>
@@ -330,7 +345,7 @@
                 </p>
               </div>
             </div>
-            <div class="github-stats">
+            <div class="github-stats max-md:!border-l-0 max-md:!pl-0">
               <div>
                 <strong>12</strong>
                 <span>commits</span>
@@ -348,11 +363,11 @@
         </div>
       </section>
 
-      <section class="branch-section background-gray">
-        <div class="branch-layout">
+      <section class="branch-section background-gray max-[1199px]:!pb-24">
+        <div class="branch-layout max-[1199px]:!flex-col max-[1199px]:!items-stretch max-[1199px]:!gap-12">
           <div class="branch-copy">
-            <p class="section-kicker"><span>――</span>ㅤBRANCHES</p>
-            <h1>
+            <p class="section-kicker kicker-label"><span>――</span> BRANCHES</p>
+            <h1 class="max-md:!text-[4.5rem]">
               Trabalhe sem <span class="color-purple">quebrar tudo.</span>
             </h1>
             <p class="color-gray">
@@ -369,12 +384,12 @@
               <li><span class="dot-purple"></span> feature/ui — redesign</li>
             </ul>
           </div>
-          <div class="branch-quadro">
+          <div class="branch-quadro max-[1199px]:!flex-none max-md:!overflow-x-auto transition-transform duration-300 hover:scale-105">
             <div class="branch-quadro-top">
               <p>repository / gitbase</p>
               <p>3 branches</p>
             </div>
-            <div class="branch-tree">
+            <div class="branch-tree max-md:!min-w-[50rem]">
               <div class="branch-line line-main"></div>
               <div class="branch-line line-feature"></div>
               <div class="branch-line line-feature-2"></div>
@@ -391,32 +406,32 @@
         </div>
       </section>
 
-      <section class="commands-section ">
+      <section class="commands-section max-[1199px]:!pb-24">
         <div class="commands-header">
-          <p class="section-kicker"><span>――</span>ㅤPRATIQUE</p>
-          <h1>Explore os comandos.</h1>
+          <p class="section-kicker kicker-label"><span>――</span> PRATIQUE</p>
+          <h1 class="max-md:!text-[4.5rem]">Explore os comandos.</h1>
           <p class="color-gray">
             Selecione um comando e descubra o que realmente acontece por trás
             dele.
           </p>
         </div>
-        <div class="command-app">
+        <div class="command-app max-md:!grid-cols-1 transition-transform duration-300 hover:scale-105">
           <div class="lado_esquerdo">
             <p>GIT COMMANDS</p>
-            <button class="command-button active" data-command="status">
+            <button class="command-button active transition-transform duration-300 hover:scale-105" data-command="status">
               git status
             </button>
-            <button class="command-button" data-command="add">git add</button>
-            <button class="command-button" data-command="commit">
+            <button class="command-button transition-transform duration-300 hover:scale-105" data-command="add">git add</button>
+            <button class="command-button transition-transform duration-300 hover:scale-105" data-command="commit">
               git commit
             </button>
-            <button class="command-button" data-command="branch">
+            <button class="command-button transition-transform duration-300 hover:scale-105" data-command="branch">
               git branch
             </button>
-            <button class="command-button" data-command="push">git push</button>
-            <button class="command-button" data-command="pull">git pull</button>
+            <button class="command-button transition-transform duration-300 hover:scale-105" data-command="push">git push</button>
+            <button class="command-button transition-transform duration-300 hover:scale-105" data-command="pull">git pull</button>
           </div>
-          <div class="lado_direito">
+          <div class="lado_direito max-md:!p-6 max-md:!min-w-0">
             <div>
               <h3 id="commandTitle">git status</h3>
               <p id="commandDescription">
@@ -430,7 +445,7 @@
                 <span class="circle yellow"></span>
                 <span class="circle green"></span>
               </div>
-              <div class="code-content" id="commandCode">
+              <div class="code-content max-md:!overflow-x-auto" id="commandCode">
                 <p><span class="path-terminal">$ git status</span></p>
                 <p class="color-gray">On branch main</p>
                 <p class="color-red">modified: src/app.js</p>
@@ -443,22 +458,22 @@
 
       <section class="gradient-ultima-section background-gray">
         <div class="cta-header">
-          <p class="section-kicker"><span>――</span>ㅤGITBASE</p>
-          <h1>
+          <p class="section-kicker kicker-label"><span>――</span> GITBASE</p>
+          <h1 class="max-md:!text-[4.5rem]">
             Seu próximo commit <span class="color-blue">começa aqui.</span>
           </h1>
           <p class="color-gray">
            Acesse as outras seções no menu e aprenda tudo o que você precisa para dominar Git e GitHub.
           </p>
         </div>
-        <div class="cta-features">
-          <a href="./pages/git.html" class="cta-feature">
+        <div class="cta-features max-md:!grid-cols-1">
+          <a href="./pages/git.html" class="cta-feature transition-transform duration-300 hover:scale-105">
             <p class="cta-number">01</p>
             <h3>Aprenda Git</h3>
             <p>Entenda versionamento, commits, branches e o fluxo do Git.</p>
             <span class="cta-arrow">→</span>
           </a>
-          <a href="./pages/guias.html" class="cta-feature">
+          <a href="./pages/guias.html" class="cta-feature transition-transform duration-300 hover:scale-105">
             <p class="cta-number">02</p>
             <h3>Siga os guias</h3>
             <p>
@@ -466,7 +481,7 @@
             </p>
             <span class="cta-arrow">→</span>
           </a>
-          <a href="https://github.com" target="_blank" class="cta-feature">
+          <a href="https://github.com" target="_blank" class="cta-feature transition-transform duration-300 hover:scale-105">
             <p class="cta-number">03</p>
             <h3>Ir para Github</h3>
             <p>
@@ -478,13 +493,12 @@
       </section>
     </main>
     <footer>
-      <div class="container">
+      <div class="container max-md:!flex-col max-md:!gap-4 max-md:!pb-8 mb-6">
         <p>© 2026 GitBase</p>
         <p>Aprenda. Versione. Colabore.</p>
-        <p>Feito para aprender Git e GitHub.</p
+        <p>Feito para aprender Git e GitHub.</p>
       </div>
     </footer>
     <script src="./script.js"></script>
   </body>
-</html
-
+</html>

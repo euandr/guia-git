@@ -5,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub | GitBase</title>
 
+    <script> 
+        tailwind.config = { 
+            theme: { 
+                screens: {  /* Dimensionamento da tela para responsividade */
+                    md: '768px', lg: '1024px', xl: '1200px'
+                }  /* Tablets, notebooks, desktops */
+            }
+        }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="./css/github.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -22,15 +32,19 @@
 
 <body>
     <div class="circle-gradiente-blue-green"></div>
-
+    
+    <!-- CABEÇALHO E BARRA DE NAVEGAÇÃO -->
     <header>
         <nav class="container">
+    
+            <!-- Logo -->
             <div class="logo">
                 <img src="../assets/imagens/geral/logo.png" alt="Logo GitBase">
                 <p>GitBase <span>.</span></p>
             </div>
-
-            <div class="menu !hidden md:!flex">
+    
+            <!-- Links de navegação -->
+            <div class="menu !hidden md:!flex [&>a]:transition-transform [&>a]:duration-300 [&>a:hover]:scale-105">
                 <a href="../index.html">Início</a>
                 <a href="./git.html">Git</a>
                 <a href="./github.html" class="ativo">Github</a>
@@ -38,7 +52,7 @@
                 <a href="./sobre.html">Sobre</a>
             </div>
 
-            <button class="!hidden md:!block" onclick="irParaGithub()">Conhecer Github</button>
+            <button class="!hidden md:!block transition-transform duration-300 hover:scale-105" onclick="irParaGithub()">Conhecer Github</button>
             <details class="group md:hidden">
                 <summary class="flex cursor-pointer list-none items-center justify-center text-[2.4rem] text-white [&::-webkit-details-marker]:hidden" aria-label="Abrir ou fechar menu">
                     <span class="group-open:hidden" aria-hidden="true">☰</span>
@@ -50,78 +64,122 @@
                     <a href="./github.html" class="ativo">Github</a>
                     <a href="./guias.html">Guias</a>
                     <a href="./sobre.html">Sobre</a>
-                    <button onclick="irParaGithub()">Conhecer Github</button>
+                    <button class="transition-transform duration-300 hover:scale-105" onclick="irParaGithub()">Conhecer Github</button>
                 </div>
             </details>
         </nav>
     </header>
 
+
     <main class="pagina-github">
-        <section class="hero-github container">
-            <p class="marcador-secao"><span>――</span> PLATAFORMA COLABORATIVA</p>
-            <h1>GitHub <span>(Nuvem).</span></h1>
-            <p class="texto-intro">
+        
+        <!-- APRESENTAÇÃO INICIAL -->
+         <!-- PLATAFORMA COLABORATIVA -->
+        <section
+            class="hero-github container mx-auto pt-[56px] pb-[64px] md:pt-[80px] md:pb-[80px] xl:pt-[112px] xl:pb-[120px]">
+        
+            <p class="marcador-secao">
+                <span>――</span> PLATAFORMA COLABORATIVA
+            </p>
+        
+            <h1 class="max-w-[1100px] text-[clamp(44px,10vw,76px)] leading-[1.05] xl:text-[112px]">
+                GitHub <span>(Nuvem).</span>
+            </h1>
+        
+            <p class="texto-intro max-w-[900px] text-[16px] leading-[1.7] md:text-[20px]">
                 Seu trabalho em equipe na nuvem. Entenda como o GitHub complementa
                 o Git, hospeda seus repositórios e facilita a colaboração em projetos.
             </p>
-
-            <div class="hero-resumo">
-                <div>
+        
+            <!-- Resumo das funcionalidades -->
+            <div
+                class="hero-resumo mt-[40px] grid min-w-0 grid-cols-1 gap-px md:mt-[56px] md:grid-cols-2 xl:mt-[80px] xl:grid-cols-3">
+        
+                <div class="min-w-0 p-[24px] md:p-[28px]">
                     <span class="numero">01</span>
                     <strong>Hospede</strong>
                     <p>Seus repositórios ficam disponíveis na nuvem.</p>
                 </div>
-                <div>
+        
+                <div class="min-w-0 p-[24px] md:p-[28px]">
                     <span class="numero">02</span>
                     <strong>Colabore</strong>
                     <p>Trabalhe com outras pessoas usando branches e PRs.</p>
                 </div>
-                <div>
+        
+                <div class="min-w-0 p-[24px] md:p-[28px]">
                     <span class="numero">03</span>
                     <strong>Organize</strong>
                     <p>Use Issues e Projects para acompanhar tarefas.</p>
                 </div>
+        
             </div>
         </section>
 
-        <section class="secao-github container">
-            <div class="cabecalho-secao">
+
+        <!-- PRIMEIROS PASSOS -->
+        <section class="secao-github container mx-auto py-[64px] md:py-[80px] xl:py-[96px]">
+        
+            <div
+                class="cabecalho-secao mb-[36px] flex flex-col items-start gap-[20px] md:mb-[48px] md:flex-row md:items-end md:justify-between">
+        
                 <div>
-                    <p class="marcador-secao"><span>――</span> PRIMEIROS PASSOS</p>
+                    <p class="marcador-secao">
+                        <span>――</span> PRIMEIROS PASSOS
+                    </p>
+        
                     <h2>Ambiente remoto e segurança</h2>
                 </div>
-                <p>Prepare sua conta, conheça a interface e configure formas seguras de acesso.</p>
+        
+                <p class="max-w-[480px] text-[14px] leading-[1.7]">
+                    Prepare sua conta, conheça a interface e configure formas seguras de acesso.
+                </p>
+        
             </div>
-
-            <div class="grid-cards">
-                <article class="card-github">
+        
+            <!-- Grade de cards -->
+            <div class="grid grid-cols-1 gap-[20px] md:grid-cols-2 xl:grid-cols-3">
+        
+                <article class="card-github min-w-0 p-[24px] md:p-[28px]">
                     <span class="numero-card">01</span>
                     <i class="fa-brands fa-github icone-card"></i>
+        
                     <h3>Criando sua conta</h3>
+        
                     <p>Acesse o GitHub e explore a interface principal.</p>
+        
                     <ol>
-                        <li>Acesse <a href="https://github.com/" target="_blank" rel="noopener noreferrer">github.com</a> e crie uma conta.</li>
+                        <li>Acesse <a href="https://github.com/" target="_blank" rel="noopener noreferrer">github.com</a> e crie
+                            uma conta.</li>
                         <li>Conheça o <strong>Dashboard</strong>, onde aparecem seus projetos e atualizações.</li>
                         <li>Explore <strong>Repositories</strong>, onde ficam os arquivos e o histórico de commits.</li>
                     </ol>
                 </article>
-
-                <article class="card-github">
+        
+                <article class="card-github min-w-0 p-[24px] md:p-[28px]">
                     <span class="numero-card">02</span>
                     <i class="fa-solid fa-shield-halved icone-card"></i>
+        
                     <h3>Autenticação segura</h3>
+        
                     <p>O GitHub utiliza métodos de autenticação para proteger o acesso aos repositórios.</p>
+        
                     <ul>
-                        <li><strong>Token de Acesso Pessoal (PAT):</strong> token utilizado para autenticação em operações compatíveis.</li>
-                        <li><strong>Chave SSH:</strong> par de chaves criptográficas que permite autenticação pelo terminal.</li>
+                        <li><strong>Token de Acesso Pessoal (PAT):</strong> token utilizado para autenticação em operações
+                            compatíveis.</li>
+                        <li><strong>Chave SSH:</strong> par de chaves criptográficas que permite autenticação pelo terminal.
+                        </li>
                     </ul>
                 </article>
-
-                <article class="card-github">
+        
+                <article class="card-github min-w-0 p-[24px] md:p-[28px]">
                     <span class="numero-card">03</span>
                     <i class="fa-solid fa-users icone-card"></i>
+        
                     <h3>Gerenciamento de colaboradores</h3>
+        
                     <p>Adicione integrantes ao repositório para que a equipe possa trabalhar em conjunto.</p>
+        
                     <ol>
                         <li>Abra o repositório no GitHub.</li>
                         <li>Entre em <strong>Settings → Collaborators</strong>.</li>
@@ -129,156 +187,254 @@
                         <li>Envie o convite para os colegas.</li>
                     </ol>
                 </article>
+        
             </div>
         </section>
 
-        <section class="secao-github secao-sincronizacao">
-            <div class="container">
-                <div class="cabecalho-secao">
+
+        <!-- SINCRONIZAÇÃO DE CÓDIGO -->
+        <section class="secao-github secao-sincronizacao py-[64px] md:py-[80px] xl:py-[96px]">
+        
+            <div class="container mx-auto">
+        
+                <div
+                    class="cabecalho-secao mb-[36px] flex flex-col items-start gap-[20px] md:mb-[48px] md:flex-row md:items-end md:justify-between">
+        
                     <div>
-                        <p class="marcador-secao"><span>――</span> LOCAL ⇆ NUVEM</p>
+                        <p class="marcador-secao">
+                            <span>――</span> LOCAL ⇆ NUVEM
+                        </p>
+        
                         <h2>Sincronização de código</h2>
                     </div>
-                    <p>Conecte o computador de cada integrante ao repositório remoto e mantenha o projeto atualizado.</p>
+        
+                    <p class="max-w-[480px] text-[14px] leading-[1.7]">
+                        Conecte o computador de cada integrante ao repositório remoto e mantenha o projeto atualizado.
+                    </p>
+        
                 </div>
-
-                <div class="imagem-comparacao">
+        
+                <!-- Imagem comparativa -->
+                <div class="imagem-comparacao mb-[36px] p-[12px] xl:mt-[24px] xl:mb-[40px] xl:mx-auto xl:max-w-[1100px]">
                     <img src="../assets/imagens/github/diferenca--git-github.jpg" alt="Visualização da diferença entre Git e GitHub">
                 </div>
-
-                <div class="comandos-grid">
-                    <article class="comando">
+        
+                <!-- Grade de comandos -->
+                <div class="grid grid-cols-1 gap-[20px] md:grid-cols-2">
+        
+                    <article class="comando min-w-0 p-[24px]">
                         <span>01</span>
                         <h3>Clonando um repositório</h3>
                         <p>Se o projeto já existe no GitHub, faça uma cópia completa para o computador.</p>
-                        <code>git clone https://github.com/usuario/nome-do-projeto.git</code>
+                        <code
+                            class="block max-w-full whitespace-normal break-words">git clone https://github.com/usuario/nome-do-projeto.git</code>
                     </article>
-
-                    <article class="comando">
+        
+                    <article class="comando min-w-0 p-[24px]">
                         <span>02</span>
                         <h3>Vinculando ao GitHub</h3>
                         <p>Conecte uma pasta local a um repositório remoto existente.</p>
-                        <code>git remote add origin https://github.com/usuario/nome-do-projeto.git</code>
+                        <code
+                            class="block max-w-full whitespace-normal break-words">git remote add origin https://github.com/usuario/nome-do-projeto.git</code>
                     </article>
-
-                    <article class="comando">
+        
+                    <article class="comando min-w-0 p-[24px]">
                         <span>03</span>
                         <h3>Enviando alterações</h3>
                         <p>Depois do commit, envie as alterações locais para o GitHub.</p>
-                        <code>git push origin main</code>
+                        <code class="block max-w-full whitespace-normal break-words">git push origin main</code>
                     </article>
-
-                    <article class="comando">
+        
+                    <article class="comando min-w-0 p-[24px]">
                         <span>04</span>
                         <h3>Atualizando o projeto</h3>
                         <p>Baixe as alterações mais recentes antes de começar a trabalhar.</p>
-                        <code>git pull origin main</code>
+                        <code class="block max-w-full whitespace-normal break-words">git pull origin main</code>
                     </article>
+        
                 </div>
-
-                <div class="nota-atencao">
+        
+                <div class="nota-atencao mt-[20px] flex flex-col items-start gap-[12px] p-[20px] md:flex-row md:items-center">
                     <strong>Dica de ouro</strong>
-                    <p>Use <code>git pull</code> no início do trabalho para evitar desenvolver sobre uma versão desatualizada do projeto.</p>
+                    <p>
+                        Use <code>git pull</code> no início do trabalho para evitar desenvolver sobre uma versão desatualizada
+                        do projeto.
+                    </p>
                 </div>
+        
             </div>
         </section>
 
-        <section class="secao-github container">
-            <div class="cabecalho-secao">
+
+        <!-- FLUXO DE TRABALHO EM EQUIPE -->
+        <section class="secao-github container mx-auto py-[64px] md:py-[80px] xl:py-[96px]">
+        
+            <div
+                class="cabecalho-secao mb-[36px] flex flex-col items-start gap-[20px] md:mb-[48px] md:flex-row md:items-end md:justify-between">
+        
                 <div>
-                    <p class="marcador-secao"><span>――</span> COLABORAÇÃO</p>
+                    <p class="marcador-secao">
+                        <span>――</span> COLABORAÇÃO
+                    </p>
+        
                     <h2>Fluxo de trabalho em equipe</h2>
                 </div>
-                <p>O GitHub Flow organiza alterações por branches e permite revisar o código antes da integração.</p>
+        
+                <p class="max-w-[480px] text-[14px] leading-[1.7]">
+                    O GitHub Flow organiza alterações por branches e permite revisar o código antes da integração.
+                </p>
+        
             </div>
-
-            <div class="fluxo-equipe">
-                <div class="etapa">
+        
+            <!-- Etapas do GitHub Flow -->
+            <div class="fluxo-equipe flex flex-col gap-[12px] md:grid md:grid-cols-2 xl:flex xl:flex-row xl:items-stretch">
+        
+                <div class="etapa min-w-0 p-[24px] xl:flex-1">
                     <span>01</span>
                     <i class="fa-solid fa-code-branch"></i>
                     <h3>Branch</h3>
                     <p>Crie uma branch para cada tarefa, em vez de alterar diretamente a main.</p>
                     <code>git checkout -b feature-login</code>
                 </div>
-                <div class="seta">→</div>
-                <div class="etapa">
+        
+                <div class="seta hidden self-center xl:block">→</div>
+        
+                <div class="etapa min-w-0 p-[24px] xl:flex-1">
                     <span>02</span>
                     <i class="fa-solid fa-code-pull-request"></i>
                     <h3>Pull Request</h3>
                     <p>Envie sua branch para o GitHub e abra um PR para propor a integração.</p>
                 </div>
-                <div class="seta">→</div>
-                <div class="etapa">
+        
+                <div class="seta hidden self-center xl:block">→</div>
+        
+                <div class="etapa min-w-0 p-[24px] xl:flex-1">
                     <span>03</span>
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <h3>Code Review</h3>
                     <p>A equipe pode comentar, solicitar ajustes e aprovar as alterações.</p>
                 </div>
-                <div class="seta">→</div>
-                <div class="etapa">
+        
+                <div class="seta hidden self-center xl:block">→</div>
+        
+                <div class="etapa min-w-0 p-[24px] xl:flex-1">
                     <span>04</span>
                     <i class="fa-solid fa-code-merge"></i>
                     <h3>Merge</h3>
                     <p>Depois da revisão, a alteração pode ser integrada à versão principal.</p>
                 </div>
+        
             </div>
-
-            <div class="bloco-conflito">
+        
+            <!-- Resolução de conflitos -->
+            <div
+                class="bloco-conflito mt-[48px] grid grid-cols-1 gap-[28px] border-t border-[#30363d] pt-[36px] md:grid-cols-2 md:gap-[40px]">
+        
                 <div>
-                    <p class="marcador-secao"><span>――</span> QUANDO HÁ CONFLITO</p>
+                    <p class="marcador-secao">
+                        <span>――</span> QUANDO HÁ CONFLITO
+                    </p>
+        
                     <h3>Resolução de conflitos de merge</h3>
-                    <p>Quando branches alteram as mesmas linhas de um arquivo, o GitHub sinaliza o conflito para que a equipe escolha como resolver a diferença.</p>
+        
+                    <p>
+                        Quando branches alteram as mesmas linhas de um arquivo, o GitHub sinaliza o conflito para que a equipe
+                        escolha como resolver a diferença.
+                    </p>
                 </div>
-
-                <ol>
+        
+                <ol class="min-w-0 pl-[24px]">
                     <li>Identifique os arquivos em conflito.</li>
                     <li>Escolha a versão adequada usando o GitHub ou seu editor.</li>
                     <li>Faça o commit da resolução e finalize o merge do PR.</li>
                 </ol>
+        
             </div>
+        
         </section>
 
-        <section class="secao-github secao-projetos">
-            <div class="container">
-                <div class="cabecalho-secao">
+
+        <!-- GERENCIAMENTO DE PROJETOS -->
+        <section class="secao-github secao-projetos py-[64px] md:py-[80px] xl:py-[96px]">
+        
+            <div class="container mx-auto">
+        
+                <div class="cabecalho-secao mb-[36px] flex flex-col items-start gap-[20px] md:mb-[48px] md:flex-row md:items-end md:justify-between">
+        
                     <div>
-                        <p class="marcador-secao"><span>――</span> ORGANIZAÇÃO</p>
+                        <p class="marcador-secao">
+                            <span>――</span> ORGANIZAÇÃO
+                        </p>
                         <h2>Gerenciamento de projetos acadêmicos</h2>
                     </div>
-                    <p>Use os recursos do GitHub para organizar tarefas, prazos e responsabilidades do grupo.</p>
+        
+                    <p class="max-w-[480px] text-[14px] leading-[1.7]">
+                        Use os recursos do GitHub para organizar tarefas, prazos e responsabilidades do grupo.
+                    </p>
+        
                 </div>
-
-                <div class="grid-cards projetos">
-                    <article class="card-github">
+        
+                <!-- Cards de projetos -->
+                <div class="grid grid-cols-1 gap-[20px] md:grid-cols-2">
+        
+                    <article class="card-github min-w-0 p-[24px] md:p-[28px]">
+        
                         <span class="numero-card">01</span>
                         <i class="fa-regular fa-circle-check icone-card"></i>
                         <h3>GitHub Issues</h3>
-                        <p>Transforme tarefas e problemas em itens acompanháveis dentro do repositório.</p>
+                        <p>
+                            Transforme tarefas e problemas em itens acompanháveis dentro do repositório.
+                        </p>
+
                         <ul>
                             <li>Crie uma Issue para cada tarefa.</li>
                             <li>Atribua responsáveis.</li>
                             <li>Use labels como <code>bug</code>, <code>documentation</code> e <code>enhancement</code>.</li>
                         </ul>
+        
                     </article>
-
-                    <article class="card-github">
+        
+                    <article class="card-github min-w-0 p-[24px] md:p-[28px]">
+        
                         <span class="numero-card">02</span>
                         <i class="fa-solid fa-table-columns icone-card"></i>
                         <h3>GitHub Projects</h3>
-                        <p>Visualize o andamento do projeto usando um quadro no estilo Kanban.</p>
-                        <div class="kanban">
-                            <div><b>To Do</b><span>Tarefas pendentes</span></div>
-                            <div><b>In Progress</b><span>Em andamento</span></div>
-                            <div><b>Done</b><span>Concluído</span></div>
-                        </div>
-                    </article>
-                </div>
+                        <p>
+                            Visualize o andamento do projeto usando um quadro no estilo Kanban.
+                        </p>
 
-                <div class="fechamento">
-                    <p><span>Git</span> cuida do histórico local. <span>GitHub</span> amplia esse fluxo para a nuvem, colaboração e organização do projeto.</p>
+                        <!-- Quadro Kanban -->
+                        <div class="kanban mt-[24px] grid grid-cols-1 gap-[10px] md:grid-cols-3">
+        
+                            <div class="min-w-0 min-h-[90px] p-[12px]">
+                                <b>To Do</b>
+                                <span>Tarefas pendentes</span>
+                            </div>
+                            <div class="min-w-0 min-h-[90px] p-[12px]">
+                                <b>In Progress</b>
+                                <span>Em andamento</span>
+                            </div>
+                            <div class="min-w-0 min-h-[90px] p-[12px]">
+                                <b>Done</b>
+                                <span>Concluído</span>
+                            </div>
+                        </div>
+        
+                    </article>
+        
                 </div>
+        
+                <!-- Mensagem de encerramento -->
+                <div class="fechamento mt-[40px] p-[24px] text-center">
+                    <p>
+                        <span>Git</span> cuida do histórico local.
+                        <span>GitHub</span> amplia esse fluxo para a nuvem, colaboração e organização do projeto.
+                    </p>
+                </div>
+        
             </div>
         </section>
+
     </main>
 
     <footer class="mb-6">
@@ -289,6 +445,8 @@
         </div>
     </footer>
 
-    <script src="../script.js"></script>
+<!-- JavaScript geral do projeto -->
+<script src="../script.js"></script>
+
 </body>
 </html>

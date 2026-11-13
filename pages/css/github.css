@@ -1,21 +1,45 @@
 @import url("../style.css");
 
-.pagina-github {
-  overflow: hidden;
-}
-
 .pagina-github h1,
 .pagina-github h2,
 .pagina-github h3,
 .pagina-github p {
   margin-top: 0;
 }
+.pagina-github img { /* Responsividade para imagens */
+    max-width: 100%;
+    height: auto;
+}
 
-.hero-github {
-  padding-top: 8rem;
-  padding-bottom: 9rem;
-  border-bottom: 0.0625rem solid
-    color-mix(in srgb, var(--color-border) 55%, transparent);
+/* Evita que o padding global de section e .container altere as seções. */
+.pagina-github .hero-github {
+  padding-top: 56px;
+  padding-bottom: 64px;
+}
+
+.pagina-github .secao-github {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+@media (min-width: 768px) {
+  .pagina-github .hero-github,
+  .pagina-github .secao-github {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pagina-github .hero-github {
+    padding-top: 112px;
+    padding-bottom: 120px;
+  }
+
+  .pagina-github .secao-github {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
 }
 
 .marcador-secao {
@@ -23,43 +47,38 @@
   font-family: "JetBrains Mono", monospace;
   font-size: 1.1rem;
   letter-spacing: 0.08rem;
-  margin-bottom: 1.8rem !important;
+  margin-bottom: 1.8rem;
 }
-
 .marcador-secao span {
   color: var(--color-blue);
 }
 
+.hero-github {
+  border-bottom: 0.0625rem solid
+    color-mix(in srgb, var(--color-border) 55%, transparent);
+}
+
 .hero-github h1 {
-  max-width: 75rem;
   margin-bottom: 2rem;
-  font-size: clamp(5rem, 8vw, 9rem);
-  line-height: 0.92;
+  font-size: clamp(4.8rem, 7vw, 8rem);
 }
 
 .hero-github h1 span {
   color: var(--color-blue);
 }
 
-.texto-intro {
-  max-width: 70rem;
+.pagina-github .texto-intro {
   color: var(--color-text-secondary);
   font-size: 1.8rem;
-  line-height: 1.7;
 }
 
 .hero-resumo {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  margin-top: 6rem;
   border: 0.0625rem solid var(--color-border);
   background: var(--color-border);
 }
 
 .hero-resumo > div {
   min-height: 15rem;
-  padding: 2.4rem;
   background: var(--color-card-inner);
 }
 
@@ -87,49 +106,26 @@
   line-height: 1.6;
 }
 
-.secao-github {
-  padding-top: 9rem;
-  padding-bottom: 10rem;
-}
-
 .secao-sincronizacao,
 .secao-projetos {
   background: #0d1219;
-}
-
-.cabecalho-secao {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 4rem;
-  margin-bottom: 4rem;
 }
 
 .cabecalho-secao h2 {
   max-width: 70rem;
   margin: 0;
   font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(3.4rem, 5vw, 5.5rem);
+  font-size: clamp(3.4rem, 5vw, 4.2rem);
   line-height: 0.98;
 }
 
 .cabecalho-secao > p {
-  max-width: 34rem;
   margin: 0 0 0.4rem;
   color: var(--color-text-muted);
-  font-size: 1.4rem;
-  line-height: 1.6;
-}
-
-.grid-cards {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
 }
 
 .card-github {
   position: relative;
-  padding: 2.8rem;
   border: 0.0625rem solid var(--color-border);
   border-radius: 1rem;
   background: var(--color-quadro-body);
@@ -142,10 +138,7 @@
 }
 
 .icone-card {
-  display: block;
-  margin-bottom: 2rem;
   color: var(--color-blue);
-  font-size: 2.4rem;
 }
 
 .card-github h3 {
@@ -193,8 +186,6 @@
 }
 
 .imagem-comparacao {
-  margin-bottom: 4rem;
-  padding: 1.2rem;
   border: 0.0625rem solid var(--color-border);
   border-radius: 1rem;
   background: var(--color-card-inner);
@@ -208,14 +199,7 @@
   border-radius: 0.6rem;
 }
 
-.comandos-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
-}
-
 .comando {
-  padding: 2.5rem;
   border: 0.0625rem solid var(--color-border);
   background: var(--color-card-inner);
 }
@@ -233,7 +217,6 @@
 }
 
 .comando p {
-  min-height: 4.5rem;
   color: var(--color-text-secondary);
   font-size: 1.3rem;
   line-height: 1.6;
@@ -246,16 +229,13 @@
   padding: 1.3rem 1.5rem;
   border-left: 0.2rem solid var(--color-green-light);
   background: var(--color-terminal-first-dark);
-  white-space: nowrap;
   font-size: 1.1rem;
+  white-space: pre-wrap; /* Mudança para permitir quebra de linha */
+  overflow-wrap: anywhere; /* Permitir quebra de linha em qualquer ponto */
+  word-break: break-word; /* Permitir quebra de linha em palavras longas */
 }
 
 .nota-atencao {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  margin-top: 2rem;
-  padding: 1.8rem 2rem;
   border: 0.0625rem solid var(--color-border);
   border-left: 0.2rem solid var(--color-yellow);
   background: var(--color-card-inner);
@@ -281,15 +261,7 @@
   font-family: "JetBrains Mono", monospace;
 }
 
-.fluxo-equipe {
-  display: flex;
-  align-items: stretch;
-  gap: 1rem;
-}
-
 .etapa {
-  flex: 1;
-  padding: 2.3rem;
   border: 0.0625rem solid var(--color-border);
   background: var(--color-card-inner);
 }
@@ -315,7 +287,6 @@
 }
 
 .etapa p {
-  min-height: 6.3rem;
   color: var(--color-text-secondary);
   font-size: 1.25rem;
   line-height: 1.6;
@@ -330,18 +301,12 @@
 }
 
 .seta {
-  align-self: center;
   color: var(--color-blue);
   font-family: "JetBrains Mono", monospace;
   font-size: 2rem;
 }
 
 .bloco-conflito {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  margin-top: 5rem;
-  padding-top: 4rem;
   border-top: 0.0625rem solid var(--color-border);
 }
 
@@ -367,16 +332,6 @@
   margin-top: 1rem;
 }
 
-.projetos {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.kanban {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.7rem;
-  margin-top: 2rem;
-}
 
 .kanban div {
   min-height: 8rem;
@@ -400,8 +355,6 @@
 }
 
 .fechamento {
-  margin-top: 4rem;
-  padding: 2.5rem;
   border: 0.0625rem solid var(--color-border);
   background: var(--color-terminal-first);
   text-align: center;
@@ -419,26 +372,62 @@ footer {
   position: relative;
 }
 
+
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* ---------------------------------- */
+
 /* Responsividade */
-@media (max-width: 900px) {
+
+/* TELAS GRANDES: a partir de 1200px */
+@media (min-width: 1200px) {
+  .pagina-github .imagem-comparacao {
+    width: 100%;
+    max-width: 900px;
+  }
+
+  .imagem-comparacao img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    border-radius: 0.6rem;
+  }
+}
+
+/* TABLETS: 768px até 1199px */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .imagem-comparacao {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 36px;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .imagem-comparacao img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: none;
+    border: none;
+    border-radius: 12px;
+  }
+
   .hero-resumo,
   .grid-cards,
   .comandos-grid,
   .projetos {
-    grid-template-columns: 1fr;
-  }
-
-  .cabecalho-secao {
-    display: block;
-  }
-
-  .cabecalho-secao > p {
-    margin-top: 1.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .fluxo-equipe {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .seta {
@@ -447,40 +436,199 @@ footer {
   }
 
   .bloco-conflito {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .cabecalho-secao {
+    gap: 2rem;
   }
 }
 
-@media (max-width: 650px) {
-  .menu {
-    display: none;
-  }
+/* CELULARES: até 767px */
+@media (max-width: 767px) {
 
-  .hero-github {
-    padding-top: 6rem;
-  }
-
-  .hero-github h1 {
-    font-size: 5rem;
-  }
-
-  .hero-resumo > div,
-  .card-github,
-  .comando,
-  .etapa {
-    padding: 2rem;
-  }
-
-  .nota-atencao {
-    display: block;
-  }
-
-  .nota-atencao p {
-    margin-top: 1rem;
-  }
-
+  .hero-resumo,
+  .grid-cards,
+  .comandos-grid,
+  .projetos,
   .kanban {
     grid-template-columns: 1fr;
   }
+
+  .cabecalho-secao {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .cabecalho-secao>p {
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .bloco-conflito {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .fluxo-equipe {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .seta {
+    transform: rotate(90deg);
+    justify-self: center;
+  }
+
+  .hero-github {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .secao-github {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .hero-github h1 {
+    font-size: clamp(2.8rem, 9vw, 4.5rem);
+  }
+
+  .pagina-github .texto-intro {
+    font-size: 1.3rem;
+  }
+
+  .comando p,
+  .etapa p {
+    min-height: 0;
+  }
+
+  .nota-atencao {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+/* CELULARES PEQUENOS: até 576px */
+@media (max-width: 576px) {
+
+    .hero-github {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .hero-github h1 {
+        font-size: clamp(2.5rem, 10vw, 3.5rem);
+        overflow-wrap: anywhere;
+    }
+
+    .marcador-secao {
+        font-size: 0.85rem;
+    }
+
+    .hero-resumo > div,
+    .card-github,
+    .comando,
+    .etapa {
+        padding: 1.5rem;
+    }
+
+    .cabecalho-secao h2 {
+        font-size: clamp(2.2rem, 8vw, 3rem);
+    }
+
+    .comando code {
+        white-space: normal;
+        overflow-wrap: anywhere;
+        max-width: 100%;
+        word-break: break-word;
+    }
+    
+    .imagem-comparacao {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      overflow: visible;
+    }
+    
+    .imagem-comparacao img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      max-height: none;
+      object-fit: contain;
+    }
+    
+    .kanban {
+      grid-template-columns: 1fr;
+    }
+
+    .fechamento {
+        padding: 1.5rem;
+    }
+
+    .fechamento p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Animações e Transições */
+
+/* Transição dos cards */
+.card-github {
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+/* Efeito ao passar o mouse */
+.card-github:hover {
+    border-color: var(--color-blue);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px var(--color-blue-glow);
+}
+
+/* Animação de entrada */
+@keyframes entrada-suave {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicação da animação nos resumos */
+.hero-resumo > div {
+    animation: entrada-suave 0.6s ease both;
+}
+
+.hero-resumo > div:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.hero-resumo > div:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* Respeita usuários que preferem menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
